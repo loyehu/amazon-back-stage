@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>亚马逊后台管理-访问与销量</title>
+    <meta name="keywords" content="亚马逊,购物">
+    <meta name="description" content="亚马逊后台管理">
+    <link rel="icon" href="" type="image/x-icon">
+    <!-- style -->
+    <link href="css/font-family.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/waves.css" rel="stylesheet"/>
+    <link href="css/animate.css" rel="stylesheet"/>
+    <link href="css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
+    <link href="css/bootstrap-select.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/all-themes.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+</head>
+<body class="theme-red">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <div class="search-icon">
+            <i class="material-icons">search</i>
+        </div>
+        <input type="text" placeholder="START TYPING...">
+        <div class="close-search">
+            <i class="material-icons">close</i>
+        </div>
+    </div>
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="navbar-brand" href="manage-account.html">亚马逊后台管理</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Call Search -->
+                    <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
+                    <!-- Notifications -->
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                            <i class="material-icons">notifications</i>
+                            <span class="label-count">7</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">消息通知</li>
+                            <li class="body">
+                                <ul class="menu">
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="icon-circle bg-light-green">
+                                                <i class="material-icons">comment</i>
+                                            </div>
+                                            <div class="menu-info">
+                                                <h4>第一条消息通知</h4>
+                                                <p>
+                                                    <i class="material-icons">access_time</i> 14 分钟之前
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="icon-circle bg-light-green">
+                                                <i class="material-icons">comment</i>
+                                            </div>
+                                            <div class="menu-info">
+                                                <h4>第二条消息通知</h4>
+                                                <p>
+                                                    <i class="material-icons">access_time</i> 22 分钟之前
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="icon-circle bg-light-green">
+                                                <i class="material-icons">comment</i>
+                                            </div>
+                                            <div class="menu-info">
+                                                <h4>第三条消息通知</h4>
+                                                <p>
+                                                    <i class="material-icons">access_time</i> 2 小时之前
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="icon-circle bg-light-green">
+                                                <i class="material-icons">comment</i>
+                                            </div>
+                                            <div class="menu-info">
+                                                <h4>第四条消息通知</h4>
+                                                <p>
+                                                    <i class="material-icons">access_time</i> 3 小时之前
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer">
+                                <a href="javascript:void(0);">查看所有消息通知</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Left Sidebar -->
+    <section>
+        <aside id="leftsidebar" class="sidebar">
+            <!-- User Info -->
+            <div class="user-info">
+                <div class="image">
+                    <img src="image/user.png" width="48" height="48" alt="User" />
+                </div>
+                <div class="info-container">
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
+                    <div class="email">john.doe@example.com</div>
+                    <div class="btn-group user-helper-dropdown">
+                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
+                            <li role="seperator" class="divider"></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
+                            <li role="seperator" class="divider"></li>
+                            <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+                    <li class="header">MAIN NAVIGATION</li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">account_box</i>
+                            <span>账号资料管理</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li><a href="manage-account.html">账户管理</a></li>
+                            <li><a href="data-entry.html">资料录入</a></li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">swap_calls</i>
+                            <span>账号订单管理</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>订单管理</span>
+                                </a>
+                                <ul class="ml-menu">
+                                    <li><a href="shops-monitor.html">店铺监控</a></li>
+                                    <li><a href="order-inquiry.html">订单查询</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>产品管理</span>
+                                </a>
+                                <ul class="ml-menu">
+                                    <li><a href="upload-form.html">上传产品</a></li>
+                                    <li><a href="production-statistics.html">产品统计</a></li>
+                                    <li><a href="product-generate.html">产品生成</a></li>
+                                    <li><a href="table-form-making.html">产品表格制作</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>买家消息</span>
+                                </a>
+                                <ul class="ml-menu">
+                                    <li><a href="javascript:void(0);">等待回复</a></li>
+                                    <li><a href="javascript:void(0);">联系买家</a></li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>业务报表</span>
+                                </a>
+                                <ul class="ml-menu">
+                                    <li class="active"><a href="javascript:void(0);">访问与销量</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">assignment</i>
+                            <span>管理员账号</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="javascript:void(0);" class="menu-toggle">
+                                    <span>基本设置</span>
+                                </a>
+                                <ul class="ml-menu">
+                                    <li><a href="new-subaccount.html">新增子账号</a></li>
+                                    <li><a href="account-list.html">账号列表</a></li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="menu-toggle">
+                                            资料编辑
+                                        </a>
+                                        <ul class="ml-menu">
+                                            <li><a href="account-information.html">账号资料</a></li>
+                                            <li><a href="modified-data.html">修改资料</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- Footer -->
+            <div class="legal">
+                <div class="copyright">&copy; 2018 - 2019 <a href="javascript:void(0);">亚马逊后台管理系统</a>.</div>
+                <div class="version"><b>Version: </b> 1.0.5</div>
+            </div>
+        </aside>
+    </section>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <h2>业务报表</h2>
+            </div>
+            <!-- Select -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                访问与销量
+                                <small>搜索查看账号浏览量</small>
+                            </h2>
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-sm-4">
+                                    <select class="form-control show-tick">
+                                        <option value="">-- 选择账号 --</option>
+                                        <option value="tanyh32@hotmail.com1">tanyh32@hotmail.com1</option>
+                                        <option value="tanyh32@hotmail.com2">tanyh32@hotmail.com2</option>
+                                        <option value="tanyh32@hotmail.com3">tanyh32@hotmail.com3</option>
+                                        <option value="tanyh32@hotmail.com4">tanyh32@hotmail.com4</option>
+                                        <option value="tanyh32@hotmail.com5">tanyh32@hotmail.com5</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="datepicker form-control" placeholder="选择查看日期...">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <input type="button" class="select-btn" value="搜索">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Widgets -->
+            <div class="row clearfix">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-pink hover-expand-effect">
+                        <div class="icon">
+                            <i class="material-icons">equalizer</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">浏览量(pv)</div>
+                            <div class="number count-to" data-from="0" data-to="253" data-speed="1000" data-fresh-interval="20">253</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-cyan hover-expand-effect">
+                        <div class="icon">
+                            <i class="material-icons">shopping_cart</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">新增订单数</div>
+                            <div class="number count-to" data-from="0" data-to="77" data-speed="1000" data-fresh-interval="20">77</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-light-green hover-expand-effect">
+                        <div class="icon">
+                            <i class="material-icons">playlist_add_check</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">交易成功数</div>
+                            <div class="number count-to" data-from="0" data-to="60" data-speed="1000" data-fresh-interval="20">60</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-orange hover-expand-effect">
+                        <div class="icon">
+                            <i class="material-icons">show_chart</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">累计金额</div>
+                            <div class="number">$800.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Example Tab -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                比例指标
+                                <small>趋势图查看详情</small>
+                            </h2>
+                        </div>
+                        <div class="body">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs tab-nav-right" role="tablist">
+                                <li role="presentation" class="active"><a href="#home" data-toggle="tab">浏览量(PV)</a></li>
+                                <li role="presentation"><a href="#profile" data-toggle="tab">新增订单数</a></li>
+                                <li role="presentation"><a href="#messages" data-toggle="tab">交易成功数</a></li>
+                                <li role="presentation"><a href="#settings" data-toggle="tab">累计金额</a></li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" id="home">
+                                    <div class="body">
+                                        <h5>用户浏览量对比表格</h5>
+                                        <div class="table-responsive" style=" overflow-x: visible;">
+                                            <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                                <thead>
+                                                <tr>
+                                                    <th>日期</th>
+                                                    <th>当前账户一个月内用户浏览量</th>
+                                                    <th>所有账户一个月内用户浏览量</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-21</td>
+                                                    <td>23</td>
+                                                    <td>684</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-20</td>
+                                                    <td>21</td>
+                                                    <td>591</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-19</td>
+                                                    <td>35</td>
+                                                    <td>654</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-18</td>
+                                                    <td>26</td>
+                                                    <td>456</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-17</td>
+                                                    <td>26</td>
+                                                    <td>634</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-16</td>
+                                                    <td>36</td>
+                                                    <td>654</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-15</td>
+                                                    <td>15</td>
+                                                    <td>489</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-14</td>
+                                                    <td>32</td>
+                                                    <td>654</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-13</td>
+                                                    <td>23</td>
+                                                    <td>600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-12</td>
+                                                    <td>12</td>
+                                                    <td>530</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-11</td>
+                                                    <td>10</td>
+                                                    <td>400</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <nav class="page-view">
+                                            <ul class="pagination">
+                                                <li class="disabled">
+                                                    <a href="javascript:void(0);">
+                                                        <i class="material-icons">chevron_left</i>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="javascript:void(0);">1</a></li>
+                                                <li><a href="javascript:void(0);" class="waves-effect">2</a></li>
+                                                <li><a href="javascript:void(0);" class="waves-effect">3</a></li>
+                                                <li><a href="javascript:void(0);" class="waves-effect">4</a></li>
+                                                <li><a href="javascript:void(0);" class="waves-effect">5</a></li>
+                                                <li>
+                                                    <a href="javascript:void(0);" class="waves-effect">
+                                                        <i class="material-icons">chevron_right</i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="profile">
+                                    <div class="body">
+                                        <h5>新增订单数对比表格</h5>
+                                        <div class="table-responsive" style=" overflow-x: visible;">
+                                            <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                                <thead>
+                                                <tr>
+                                                    <th>日期</th>
+                                                    <th>当前账户一个月内新增订单数</th>
+                                                    <th>所有账户一个月内新增订单数</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-21</td>
+                                                    <td>23</td>
+                                                    <td>684</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-20</td>
+                                                    <td>21</td>
+                                                    <td>591</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-19</td>
+                                                    <td>35</td>
+                                                    <td>654</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-18</td>
+                                                    <td>26</td>
+                                                    <td>456</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-17</td>
+                                                    <td>26</td>
+                                                    <td>634</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-16</td>
+                                                    <td>36</td>
+                                                    <td>654</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-15</td>
+                                                    <td>15</td>
+                                                    <td>489</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-14</td>
+                                                    <td>32</td>
+                                                    <td>654</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-13</td>
+                                                    <td>23</td>
+                                                    <td>600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-12</td>
+                                                    <td>12</td>
+                                                    <td>530</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-11</td>
+                                                    <td>10</td>
+                                                    <td>400</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <nav class="page-view">
+                                            <ul class="pagination">
+                                                <li class="disabled">
+                                                    <a href="javascript:void(0);">
+                                                        <i class="material-icons">chevron_left</i>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="javascript:void(0);">1</a></li>
+                                                <li><a href="javascript:void(0);" class="waves-effect">2</a></li>
+                                                <li><a href="javascript:void(0);" class="waves-effect">3</a></li>
+                                                <li><a href="javascript:void(0);" class="waves-effect">4</a></li>
+                                                <li><a href="javascript:void(0);" class="waves-effect">5</a></li>
+                                                <li>
+                                                    <a href="javascript:void(0);" class="waves-effect">
+                                                        <i class="material-icons">chevron_right</i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="messages">
+                                    <div class="body">
+                                        <h5>交易成功订单对比表格</h5>
+                                        <div class="table-responsive" style=" overflow-x: visible;">
+                                            <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                                <thead>
+                                                <tr>
+                                                    <th>日期</th>
+                                                    <th>当前账户一个月内交易成功订单</th>
+                                                    <th>所有账户一个月交易成功订单</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-21</td>
+                                                    <td>23</td>
+                                                    <td>684</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-20</td>
+                                                    <td>21</td>
+                                                    <td>591</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-19</td>
+                                                    <td>35</td>
+                                                    <td>654</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-18</td>
+                                                    <td>26</td>
+                                                    <td>456</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-17</td>
+                                                    <td>26</td>
+                                                    <td>634</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-16</td>
+                                                    <td>36</td>
+                                                    <td>654</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-15</td>
+                                                    <td>15</td>
+                                                    <td>489</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-14</td>
+                                                    <td>32</td>
+                                                    <td>654</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-13</td>
+                                                    <td>23</td>
+                                                    <td>600</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-12</td>
+                                                    <td>12</td>
+                                                    <td>530</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-11</td>
+                                                    <td>10</td>
+                                                    <td>400</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <nav class="page-view">
+                                            <ul class="pagination">
+                                                <li class="disabled">
+                                                    <a href="javascript:void(0);">
+                                                        <i class="material-icons">chevron_left</i>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="javascript:void(0);">1</a></li>
+                                                <li><a href="javascript:void(0);" class="waves-effect">2</a></li>
+                                                <li><a href="javascript:void(0);" class="waves-effect">3</a></li>
+                                                <li><a href="javascript:void(0);" class="waves-effect">4</a></li>
+                                                <li><a href="javascript:void(0);" class="waves-effect">5</a></li>
+                                                <li>
+                                                    <a href="javascript:void(0);" class="waves-effect">
+                                                        <i class="material-icons">chevron_right</i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="settings">
+                                    <div class="body">
+                                        <h5>累计金额对比表格</h5>
+                                        <div class="table-responsive" style=" overflow-x: visible;">
+                                            <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                                <thead>
+                                                <tr>
+                                                    <th>日期</th>
+                                                    <th>当前账户一个月内累计金额</th>
+                                                    <th>所有账户一个月内累计金额</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-21</td>
+                                                    <td>$300.00</td>
+                                                    <td>$1000.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-20</td>
+                                                    <td>$320.00</td>
+                                                    <td>$2300.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-19</td>
+                                                    <td>$450.00</td>
+                                                    <td>$4500.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-18</td>
+                                                    <td>$450.00</td>
+                                                    <td>$4500.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-17</td>
+                                                    <td>$450.00</td>
+                                                    <td>$4500.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-16</td>
+                                                    <td>$450.00</td>
+                                                    <td>$4500.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-15</td>
+                                                    <td>$450.00</td>
+                                                    <td>$4500.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-14</td>
+                                                    <td>$450.00</td>
+                                                    <td>$4500.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-13</td>
+                                                    <td>$450.00</td>
+                                                    <td>$4500.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-12</td>
+                                                    <td>$450.00</td>
+                                                    <td>$4500.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="date-page-view">2018-08-11</td>
+                                                    <td>$450.00</td>
+                                                    <td>$4500.00</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <nav class="page-view">
+                                            <ul class="pagination">
+                                                <li class="disabled">
+                                                    <a href="javascript:void(0);">
+                                                        <i class="material-icons">chevron_left</i>
+                                                    </a>
+                                                </li>
+                                                <li class="active"><a href="javascript:void(0);">1</a></li>
+                                                <li><a href="javascript:void(0);" class="waves-effect">2</a></li>
+                                                <li><a href="javascript:void(0);" class="waves-effect">3</a></li>
+                                                <li><a href="javascript:void(0);" class="waves-effect">4</a></li>
+                                                <li><a href="javascript:void(0);" class="waves-effect">5</a></li>
+                                                <li>
+                                                    <a href="javascript:void(0);" class="waves-effect">
+                                                        <i class="material-icons">chevron_right</i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                详细数据
+                                <small>当前账户详细数据显示表格</small>
+                            </h2>
+                        </div>
+                        <div class="body table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>时间</th>
+                                    <th>浏览量</th>
+                                    <th>新增订单数</th>
+                                    <th>支付成功订单数</th>
+                                    <th>未支付订单</th>
+                                    <th>待支付订单</th>
+                                    <th>累计金额(元)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">2018-08-21</th>
+                                    <td>66</td>
+                                    <td>25</td>
+                                    <td>39</td>
+                                    <td>25</td>
+                                    <td>14</td>
+                                    <td>$100.00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2018-08-20</th>
+                                    <td>66</td>
+                                    <td>25</td>
+                                    <td>39</td>
+                                    <td>25</td>
+                                    <td>14</td>
+                                    <td>$100.00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2018-08-19</th>
+                                    <td>66</td>
+                                    <td>25</td>
+                                    <td>39</td>
+                                    <td>25</td>
+                                    <td>14</td>
+                                    <td>$100.00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2018-08-18</th>
+                                    <td>66</td>
+                                    <td>25</td>
+                                    <td>39</td>
+                                    <td>25</td>
+                                    <td>14</td>
+                                    <td>$100.00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2018-08-17</th>
+                                    <td>66</td>
+                                    <td>25</td>
+                                    <td>39</td>
+                                    <td>25</td>
+                                    <td>14</td>
+                                    <td>$100.00</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <nav class="page-view">
+                                <ul class="pagination">
+                                    <li class="disabled">
+                                        <a href="javascript:void(0);">
+                                            <i class="material-icons">chevron_left</i>
+                                        </a>
+                                    </li>
+                                    <li class="active"><a href="javascript:void(0);">1</a></li>
+                                    <li><a href="javascript:void(0);" class="waves-effect">2</a></li>
+                                    <li><a href="javascript:void(0);" class="waves-effect">3</a></li>
+                                    <li><a href="javascript:void(0);" class="waves-effect">4</a></li>
+                                    <li><a href="javascript:void(0);" class="waves-effect">5</a></li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="waves-effect">
+                                            <i class="material-icons">chevron_right</i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Js -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/jquery.slimscroll.js"></script>
+    <script src="js/waves.js"></script>
+    <script src="js/autosize.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/bootstrap-material-datetimepicker.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/basic-form-elements.js"></script>
+    <script>
+        $(function () {
+            initCounters();
+            initCharts();
+        });
+
+        //Widgets count plugin
+        function initCounters() {
+            $('.count-to').countTo();
+        }
+
+        //Charts
+        function initCharts() {
+            //Chart Bar
+            $('.chart.chart-bar').sparkline(undefined, {
+                type: 'bar',
+                barColor: '#fff',
+                negBarColor: '#fff',
+                barWidth: '4px',
+                height: '34px'
+            });
+
+            //Chart Pie
+            $('.chart.chart-pie').sparkline(undefined, {
+                type: 'pie',
+                height: '50px',
+                sliceColors: ['rgba(255,255,255,0.70)', 'rgba(255,255,255,0.85)', 'rgba(255,255,255,0.95)', 'rgba(255,255,255,1)']
+            });
+
+            //Chart Line
+            $('.chart.chart-line').sparkline(undefined, {
+                type: 'line',
+                width: '60px',
+                height: '45px',
+                lineColor: '#fff',
+                lineWidth: 1.3,
+                fillColor: 'rgba(0,0,0,0)',
+                spotColor: 'rgba(255,255,255,0.40)',
+                maxSpotColor: 'rgba(255,255,255,0.40)',
+                minSpotColor: 'rgba(255,255,255,0.40)',
+                spotRadius: 3,
+                highlightSpotColor: '#fff'
+            });
+        }
+    </script>
+</body>
+</html>

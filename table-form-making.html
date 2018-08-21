@@ -12,7 +12,6 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/waves.css" rel="stylesheet"/>
     <link href="css/animate.css" rel="stylesheet"/>
-    <link href="css/sweetalert.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/materialize.css">
     <link rel="stylesheet" href="css/all-themes.css">
@@ -221,7 +220,7 @@
                                     <span>业务报表</span>
                                 </a>
                                 <ul class="ml-menu">
-                                    <li><a href="javascript:void(0);">访问与销量</a></li>
+                                    <li><a href="visits-and-sales.html">访问与销量</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -237,9 +236,17 @@
                                     <span>基本设置</span>
                                 </a>
                                 <ul class="ml-menu">
-                                    <li><a href="javascript:void(0);">新增子账号</a></li>
-                                    <li><a href="javascript:void(0);">账号列表</a></li>
-                                    <li><a href="javascript:void(0);">编辑资料</a></li>
+                                    <li><a href="new-subaccount.html">新增子账号</a></li>
+                                    <li><a href="account-list.html">账号列表</a></li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="menu-toggle">
+                                            资料编辑
+                                        </a>
+                                        <ul class="ml-menu">
+                                            <li><a href="account-information.html">账号资料</a></li>
+                                            <li><a href="modified-data.html">修改资料</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -248,7 +255,7 @@
             </div>
             <!-- Footer -->
             <div class="legal">
-                <div class="copyright">&copy; 2018 - 2019 <a href="javascript:void(0);">亚马逊站群管理系统</a>.</div>
+                <div class="copyright">&copy; 2018 - 2019 <a href="javascript:void(0);">亚马逊后台管理系统</a>.</div>
                 <div class="version"><b>Version: </b> 1.0.5</div>
             </div>
         </aside>
@@ -442,11 +449,8 @@
     </section>
     <script src="js/jquery-2.2.3.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
-    <script src="js/bootstrap-select.js"></script>
-    <script src="js/jquery.slimscroll.js"></script>
     <script src="js/waves.js"></script>
     <script src="js/admin.js"></script>
-    <script src="js/demo.js"></script>
 </body>
 
 </html>

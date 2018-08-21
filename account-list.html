@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>亚马逊后台管理-产品统计</title>
+    <title>亚马逊后台管理-账号列表</title>
     <meta name="keywords" content="亚马逊,购物">
     <meta name="description" content="亚马逊后台管理">
     <link rel="icon" href="" type="image/x-icon">
@@ -13,9 +13,9 @@
     <link href="css/waves.css" rel="stylesheet"/>
     <link href="css/animate.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/materialize.css">
-    <link rel="stylesheet" href="css/all-themes.css">
-    <link rel="stylesheet" href="css/common.css">
+    <link href="css/materialize.css" rel="stylesheet">
+    <link href="css/all-themes.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
 </head>
 <body class="theme-red">
 <!-- Page Loader -->
@@ -131,6 +131,7 @@
         </div>
     </div>
 </nav>
+<!-- Left Sidebar -->
 <section>
     <aside id="leftsidebar" class="sidebar">
         <!-- User Info -->
@@ -169,7 +170,7 @@
                         <li><a href="data-entry.html">资料录入</a></li>
                     </ul>
                 </li>
-                <li class="active">
+                <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">swap_calls</i>
                         <span>账号订单管理</span>
@@ -184,13 +185,13 @@
                                 <li><a href="order-inquiry.html">订单查询</a></li>
                             </ul>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="javascript:void(0);" class="menu-toggle">
                                 <span>产品管理</span>
                             </a>
                             <ul class="ml-menu">
                                 <li><a href="upload-form.html">上传产品</a></li>
-                                <li class="active"><a href="javascript:void(0);">产品统计</a></li>
+                                <li><a href="production-statistics.html">产品统计</a></li>
                                 <li><a href="product-generate.html">产品生成</a></li>
                                 <li><a href="table-form-making.html">产品表格制作</a></li>
                             </ul>
@@ -214,19 +215,19 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li class="active">
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">assignment</i>
                         <span>管理员账号</span>
                     </a>
                     <ul class="ml-menu">
-                        <li>
+                        <li class="active">
                             <a href="javascript:void(0);" class="menu-toggle">
                                 <span>基本设置</span>
                             </a>
                             <ul class="ml-menu">
                                 <li><a href="new-subaccount.html">新增子账号</a></li>
-                                <li><a href="account-list.html">账号列表</a></li>
+                                <li class="active"><a href="javascript:void(0);">账号列表</a></li>
                                 <li>
                                     <a href="javascript:void(0);" class="menu-toggle">
                                         资料编辑
@@ -249,70 +250,108 @@
         </div>
     </aside>
 </section>
+
 <section class="content">
     <div class="container-fluid">
         <div class="block-header">
-            <h2>产品管理</h2>
+            <h2>管理员账号</h2>
         </div>
-        <!-- Basic Table -->
+        <!-- Striped Rows -->
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
                         <h2>
-                            产品统计
-                            <small></small>
+                            账号列表
+                            <small>不同账号的不同角色承担不同责任</small>
                         </h2>
                     </div>
                     <div class="body table-responsive">
-                        <table class="table table-hover js-basic-example dataTable">
+                        <table class="table table-striped">
                             <thead>
                             <tr>
-                                <th>编号</th>
-                                <th>账户名称</th>
-                                <th>产品数量</th>
-                                <th>上传表格</th>
-                                <th>操作</th>
+                                <th>序号</th>
+                                <th>用户名</th>
+                                <th>角色</th>
+                                <th>名字</th>
+                                <th>手机号</th>
+                                <th>状态</th>
+                                <th>修改</th>
+                                <th>删除</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td>tanyh32@hotmail.com</td>
-                                <td>1234</td>
-                                <td>鼠标垫.xls</td>
-                                <td><a href="production-statistics-show.html" class="preview">查看</a></td>
+                                <td>Mark</td>
+                                <td>上传产品</td>
+                                <td>mdo</td>
+                                <td>15648975632</td>
+                                <td>正常</td>
+                                <td class="preview">修改</td>
+                                <td class="modification">删除</td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
-                                <td>tanyh32@hotmail.com</td>
-                                <td>4561</td>
-                                <td>桌旗.xls</td>
-                                <td><a href="production-statistics-show.html" class="preview">查看</a></td>
+                                <td>Jacob</td>
+                                <td>查看统计</td>
+                                <td>Thornton</td>
+                                <td>15648975632</td>
+                                <td>正常</td>
+                                <td class="preview">修改</td>
+                                <td class="modification">删除</td>
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
-                                <td>tanyh32@hotmail.com</td>
-                                <td>4587</td>
-                                <td>花园旗.xls</td>
-                                <td><a href="production-statistics-show.html" class="preview">查看</a></td>
+                                <td>Larry</td>
+                                <td>资料录入</td>
+                                <td>Bird</td>
+                                <td>15648975632</td>
+                                <td>正常</td>
+                                <td class="preview">修改</td>
+                                <td class="modification">删除</td>
                             </tr>
                             <tr>
                                 <th scope="row">4</th>
-                                <td>tanyh32@hotmail.com</td>
-                                <td>789</td>
-                                <td>抱枕.xls</td>
-                                <td><a href="production-statistics-show.html" class="preview">查看</a></td>
+                                <td>Larry</td>
+                                <td>发货</td>
+                                <td>lajelly</td>
+                                <td>15648975632</td>
+                                <td>正常</td>
+                                <td class="preview">修改</td>
+                                <td class="modification">删除</td>
                             </tr>
                             <tr>
                                 <th scope="row">5</th>
-                                <td>tanyh32@hotmail.com</td>
-                                <td>7845</td>
-                                <td>窗帘.xls</td>
-                                <td><a href="production-statistics-show.html" class="preview">查看</a></td>
+                                <td>Larry</td>
+                                <td>资料录入</td>
+                                <td>Kikat</td>
+                                <td>15648975632</td>
+                                <td>正常</td>
+                                <td class="preview">修改</td>
+                                <td class="modification">删除</td>
                             </tr>
                             </tbody>
                         </table>
+                        <nav class="page-view">
+                            <ul class="pagination">
+                                <li class="disabled">
+                                    <a href="javascript:void(0);">
+                                        <i class="material-icons">chevron_left</i>
+                                    </a>
+                                </li>
+                                <li class="active"><a href="javascript:void(0);">1</a></li>
+                                <li><a href="javascript:void(0);" class="waves-effect">2</a></li>
+                                <li><a href="javascript:void(0);" class="waves-effect">3</a></li>
+                                <li><a href="javascript:void(0);" class="waves-effect">4</a></li>
+                                <li><a href="javascript:void(0);" class="waves-effect">5</a></li>
+                                <li>
+                                    <a href="javascript:void(0);" class="waves-effect">
+                                        <i class="material-icons">chevron_right</i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -322,11 +361,7 @@
 <!-- Js -->
 <script src="js/jquery-2.2.3.min.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
-<script src="js/jquery.slimscroll.js"></script>
 <script src="js/waves.js"></script>
-<script src="js/jquery.dataTables.js"></script>
-<script src="js/dataTables.bootstrap.js"></script>
 <script src="js/admin.js"></script>
-<script src="js/jquery-datatable.js"></script>
 </body>
 </html>

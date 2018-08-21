@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>亚马逊后台管理-产品统计</title>
+    <title>亚马逊后台管理-账号资料</title>
     <meta name="keywords" content="亚马逊,购物">
     <meta name="description" content="亚马逊后台管理">
     <link rel="icon" href="" type="image/x-icon">
@@ -13,9 +13,17 @@
     <link href="css/waves.css" rel="stylesheet"/>
     <link href="css/animate.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/materialize.css">
-    <link rel="stylesheet" href="css/all-themes.css">
-    <link rel="stylesheet" href="css/common.css">
+    <link href="css/materialize.css" rel="stylesheet">
+    <link href="css/all-themes.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <style>
+        .form-control-label{
+            margin-bottom: 40px!important;
+        }
+        .form-group{
+            line-height: 35px;
+        }
+    </style>
 </head>
 <body class="theme-red">
 <!-- Page Loader -->
@@ -131,6 +139,7 @@
         </div>
     </div>
 </nav>
+<!-- Left Sidebar -->
 <section>
     <aside id="leftsidebar" class="sidebar">
         <!-- User Info -->
@@ -169,7 +178,7 @@
                         <li><a href="data-entry.html">资料录入</a></li>
                     </ul>
                 </li>
-                <li class="active">
+                <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">swap_calls</i>
                         <span>账号订单管理</span>
@@ -184,13 +193,13 @@
                                 <li><a href="order-inquiry.html">订单查询</a></li>
                             </ul>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="javascript:void(0);" class="menu-toggle">
                                 <span>产品管理</span>
                             </a>
                             <ul class="ml-menu">
                                 <li><a href="upload-form.html">上传产品</a></li>
-                                <li class="active"><a href="javascript:void(0);">产品统计</a></li>
+                                <li><a href="production-statistics.html">产品统计</a></li>
                                 <li><a href="product-generate.html">产品生成</a></li>
                                 <li><a href="table-form-making.html">产品表格制作</a></li>
                             </ul>
@@ -214,25 +223,25 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li class="active">
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">assignment</i>
                         <span>管理员账号</span>
                     </a>
                     <ul class="ml-menu">
-                        <li>
+                        <li class="active">
                             <a href="javascript:void(0);" class="menu-toggle">
                                 <span>基本设置</span>
                             </a>
                             <ul class="ml-menu">
                                 <li><a href="new-subaccount.html">新增子账号</a></li>
                                 <li><a href="account-list.html">账号列表</a></li>
-                                <li>
+                                <li class="active">
                                     <a href="javascript:void(0);" class="menu-toggle">
                                         资料编辑
                                     </a>
                                     <ul class="ml-menu">
-                                        <li><a href="account-information.html">账号资料</a></li>
+                                        <li class="active"><a href="javascript:void(0);">账号资料</a></li>
                                         <li><a href="modified-data.html">修改资料</a></li>
                                     </ul>
                                 </li>
@@ -249,70 +258,99 @@
         </div>
     </aside>
 </section>
+
 <section class="content">
     <div class="container-fluid">
         <div class="block-header">
-            <h2>产品管理</h2>
+            <h2>管理员账号</h2>
         </div>
-        <!-- Basic Table -->
+        <!-- Striped Rows -->
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
                         <h2>
-                            产品统计
-                            <small></small>
+                            账号资料
+                            <small>账号资料详情</small>
                         </h2>
                     </div>
-                    <div class="body table-responsive">
-                        <table class="table table-hover js-basic-example dataTable">
-                            <thead>
-                            <tr>
-                                <th>编号</th>
-                                <th>账户名称</th>
-                                <th>产品数量</th>
-                                <th>上传表格</th>
-                                <th>操作</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>tanyh32@hotmail.com</td>
-                                <td>1234</td>
-                                <td>鼠标垫.xls</td>
-                                <td><a href="production-statistics-show.html" class="preview">查看</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>tanyh32@hotmail.com</td>
-                                <td>4561</td>
-                                <td>桌旗.xls</td>
-                                <td><a href="production-statistics-show.html" class="preview">查看</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>tanyh32@hotmail.com</td>
-                                <td>4587</td>
-                                <td>花园旗.xls</td>
-                                <td><a href="production-statistics-show.html" class="preview">查看</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>tanyh32@hotmail.com</td>
-                                <td>789</td>
-                                <td>抱枕.xls</td>
-                                <td><a href="production-statistics-show.html" class="preview">查看</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>tanyh32@hotmail.com</td>
-                                <td>7845</td>
-                                <td>窗帘.xls</td>
-                                <td><a href="production-statistics-show.html" class="preview">查看</a></td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    <div class="body">
+                        <form class="form-horizontal">
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label>账户名称</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        XXXXXXXXXX
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label>账户密码</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        ********
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label>确认密码</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        ********
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label>联系人名</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        Andysen
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label>联系方式</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        14796541236
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label>账户角色</label>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="demo-radio-button">
+                                            <input name="group1" type="radio" class="with-gap" id="radio_1" disabled>
+                                            <label for="radio_1">查看统计</label>
+                                            <input name="group1" type="radio" class="with-gap" id="radio_2" disabled>
+                                            <label for="radio_2">录入账号</label>
+                                            <input name="group1" type="radio" class="with-gap" id="radio_3" checked>
+                                            <label for="radio_3">产品上传</label>
+                                            <input name="group1" type="radio" id="radio_4" class="with-gap" disabled>
+                                            <label for="radio_4">发货</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
+                                    <button type="button" class="btn btn-primary m-t-15 waves-effect">提交</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -322,11 +360,7 @@
 <!-- Js -->
 <script src="js/jquery-2.2.3.min.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
-<script src="js/jquery.slimscroll.js"></script>
 <script src="js/waves.js"></script>
-<script src="js/jquery.dataTables.js"></script>
-<script src="js/dataTables.bootstrap.js"></script>
 <script src="js/admin.js"></script>
-<script src="js/jquery-datatable.js"></script>
 </body>
 </html>
