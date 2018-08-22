@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>亚马逊后台管理-等待回复</title>
+    <meta name="keywords" content="亚马逊,购物">
+    <meta name="description" content="亚马逊后台管理">
+    <link rel="icon" href="" type="image/x-icon">
+    <!-- style -->
+    <link href="css/font-family.css" rel="stylesheet" type="text/css">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/waves.css" rel="stylesheet"/>
+    <link href="css/animate.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/materialize.css" rel="stylesheet">
+    <link href="css/all-themes.css" rel="stylesheet">
+    <link href="css/news/font-awesome.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+</head>
+<body class="theme-red">
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="preloader">
+            <div class="spinner-layer pl-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+        <p>Please wait...</p>
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+<div class="overlay"></div>
+<!-- Search Bar -->
+<div class="search-bar">
+    <div class="search-icon">
+        <i class="material-icons">search</i>
+    </div>
+    <input type="text" placeholder="START TYPING...">
+    <div class="close-search">
+        <i class="material-icons">close</i>
+    </div>
+</div>
+<!-- Top Bar -->
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+            <a href="javascript:void(0);" class="bars"></a>
+            <a class="navbar-brand" href="manage-account.html">亚马逊后台管理</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- Call Search -->
+                <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
+                <!-- Notifications -->
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                        <i class="material-icons">notifications</i>
+                        <span class="label-count">7</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">消息通知</li>
+                        <li class="body">
+                            <ul class="menu">
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="icon-circle bg-light-green">
+                                            <i class="material-icons">comment</i>
+                                        </div>
+                                        <div class="menu-info">
+                                            <h4>第一条消息通知</h4>
+                                            <p>
+                                                <i class="material-icons">access_time</i> 14 分钟之前
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="icon-circle bg-light-green">
+                                            <i class="material-icons">comment</i>
+                                        </div>
+                                        <div class="menu-info">
+                                            <h4>第二条消息通知</h4>
+                                            <p>
+                                                <i class="material-icons">access_time</i> 22 分钟之前
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="icon-circle bg-light-green">
+                                            <i class="material-icons">comment</i>
+                                        </div>
+                                        <div class="menu-info">
+                                            <h4>第三条消息通知</h4>
+                                            <p>
+                                                <i class="material-icons">access_time</i> 2 小时之前
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="icon-circle bg-light-green">
+                                            <i class="material-icons">comment</i>
+                                        </div>
+                                        <div class="menu-info">
+                                            <h4>第四条消息通知</h4>
+                                            <p>
+                                                <i class="material-icons">access_time</i> 3 小时之前
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer">
+                            <a href="javascript:void(0);">查看所有消息通知</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Left Sidebar -->
+<section>
+    <aside id="leftsidebar" class="sidebar">
+        <!-- User Info -->
+        <div class="user-info">
+            <div class="image">
+                <img src="image/user.png" width="48" height="48" alt="User" />
+            </div>
+            <div class="info-container">
+                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
+                <div class="email">john.doe@example.com</div>
+                <div class="btn-group user-helper-dropdown">
+                    <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
+                        <li role="seperator" class="divider"></li>
+                        <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
+                        <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
+                        <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
+                        <li role="seperator" class="divider"></li>
+                        <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Menu -->
+        <div class="menu">
+            <ul class="list">
+                <li class="header">MAIN NAVIGATION</li>
+                <li>
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">account_box</i>
+                        <span>账号资料管理</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li><a href="manage-account.html">账户管理</a></li>
+                        <li><a href="data-entry.html">资料录入</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">swap_calls</i>
+                        <span>账号订单管理</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle">
+                                <span>订单管理</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li><a href="shops-monitor.html">店铺监控</a></li>
+                                <li><a href="order-inquiry.html">订单查询</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle">
+                                <span>产品管理</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li><a href="upload-form.html">上传产品</a></li>
+                                <li><a href="production-statistics.html">产品统计</a></li>
+                                <li><a href="product-generate.html">产品生成</a></li>
+                                <li><a href="table-form-making.html">产品表格制作</a></li>
+                            </ul>
+                        </li>
+                        <li class="active">
+                            <a href="javascript:void(0);" class="menu-toggle">
+                                <span>买家消息</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li class="active"><a href="javascript:void(0);">等待回复</a></li>
+                                <li><a href="contacting-buyers.html">联系买家</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle">
+                                <span>业务报表</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li><a href="visits-and-sales.html">访问与销量</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">assignment</i>
+                        <span>管理员账号</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="javascript:void(0);" class="menu-toggle">
+                                <span>基本设置</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li><a href="new-subaccount.html">新增子账号</a></li>
+                                <li><a href="account-list.html">账号列表</a></li>
+                                <li><a href="account-information.html">资料编辑</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- Footer -->
+        <div class="legal">
+            <div class="copyright">&copy; 2018 - 2019 <a href="javascript:void(0);">亚马逊后台管理系统</a>.</div>
+            <div class="version"><b>Version: </b> 1.0.5</div>
+        </div>
+    </aside>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="block-header">
+            <h2>买家消息</h2>
+        </div>
+        <!-- Striped Rows -->
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>
+                            等待回复
+                            <small>你有 <span class="label label-danger news-hint">6</span> 条消息未读</small>
+                        </h2>
+                    </div>
+                    <div class="content">
+                        <div class="container-mail">
+                            <div class="mailbox clearfix">
+                                <div class="mailbox-menu">
+                                    <ul class="menu">
+                                        <li><a href="#"><i class="fa fa-inbox"></i> Inbox</a></li>
+                                        <li><a href="#"><i class="fa fa-flag-o"></i> Important</a></li>
+                                        <li><a href="#"><i class="fa fa-paper-plane-o"></i> Sent</a></li>
+                                        <li><a href="#"><i class="fa fa-trash"></i> Trash</a></li>
+                                    </ul>
+                                </div>
+                                <div class="container-mailbox">
+                                    <div class="col-lg-3 col-md-4 padding-0">
+                                        <ul class="mailbox-inbox padding-0">
+                                            <li class="search">
+                                                <form>
+                                                    <input type="text" class="mailbox-search" id="mailboxsearch" placeholder="Search">
+                                                    <span class="searchbutton"><i class="fa fa-search"></i></span>
+                                                </form>
+                                            </li>
+                                            <li class="news-list current">
+                                                <a href="#" class="item clearfix">
+                                                    <img src="image/news/profileimg.png" alt="img" class="img">
+                                                    <span class="from">Jonathan Doe</span>
+                                                    Hello, m8 how is goin ?
+                                                    <span class="date">15:37</span>
+                                                </a>
+                                            </li>
+                                            <li class="news-list">
+                                                <a href="#" class="item clearfix">
+                                                    <img src="image/news/profileimg2.png" alt="img" class="img">
+                                                    <span class="from">Egemem Ka</span>
+                                                    <span class="news-content">Problems look mighty small...</span>
+                                                    <span class="date">14:10</span>
+                                                </a>
+                                            </li>
+                                            <li class="news-list">
+                                                <a href="#" class="item clearfix">
+                                                    <img src="image/news/profileimg3.png" alt="img" class="img">
+                                                    <span class="from">James Throwing</span>
+                                                    <span class="news-content">New job offer ?</span>
+                                                    <span class="date">13:50</span>
+                                                </a>
+                                            </li>
+                                            <li class="news-list">
+                                                <a href="#" class="item clearfix">
+                                                    <img src="image/news/profileimg4.png" alt="img" class="img">
+                                                    <span class="from">Timmy Jefsin</span>
+                                                    <span class="news-content">Tonight Party</span>
+                                                    <span class="date">昨天</span>
+                                                </a>
+                                            </li>
+                                            <li class="news-list">
+                                                <a href="#" class="item clearfix">
+                                                    <img src="image/news/profileimg5.png" alt="img" class="img">
+                                                    <span class="from">Heikan Jr. Dauffles</span>
+                                                    <span class="news-content">Funny Cat Videos</span>
+                                                    <span class="date">星期一</span>
+                                                </a>
+                                            </li>
+                                            <li class="news-list">
+                                                <a href="#" class="item clearfix">
+                                                    <img src="image/news/profileimg6.png" alt="img" class="img">
+                                                    <span class="from">Jane Doe</span>
+                                                    <span class="news-content">Weekend</span>
+                                                    <span class="date">18/07/30</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="chat col-lg-9 col-md-8 padding-0">
+                                        <div class="title">
+                                            <h1 class="news-title">昵称：Jonathan Doe </h1><small>( 邮箱：mail@jonathandoe.com )</small>
+                                            <p><b>To:</b> JIUCHUAN</p>
+                                            <div class="btn-group" role="group" aria-label="...">
+                                                <button type="button" class="btn btn-icon btn-sm btn-light"><i class="fa fa-share"></i></button>
+                                                <button type="button" class="btn btn-icon btn-sm btn-light"><i class="fa fa-star-o"></i></button>
+                                                <button type="button" class="btn btn-icon btn-sm btn-light"><i class="fa fa-trash"></i></button>
+                                            </div>
+                                        </div>
+                                        <ul class="conv">
+                                            <li class="news-detail-list current">
+                                                <div class="margin-10 left-news">
+                                                    <img src="image/news/profileimg.png" alt="img" class="img">
+                                                    <p class="ballon color1">Problems look mighty small from 150 miles up.</p>
+                                                </div>
+                                                <div class="margin-10 right-news">
+                                                    <img src="image/i.png" alt="img" class="img">
+                                                    <p class="ballon color2">I'm working on it</p>
+                                                </div>
+                                                <div class="margin-10 news-date">Last Message: <b>1 hours</b> ago</div>
+                                                <div class="margin-10 left-news">
+                                                    <img src="image/news/profileimg.png" alt="img" class="img">
+                                                    <p class="ballon color1">Problems look mighty small from 150 miles up.</p>
+                                                </div>
+                                                <div class="margin-10 left-news">
+                                                    <img src="image/news/profileimg.png" alt="img" class="img">
+                                                    <p class="ballon color1">Problems look mighty small from 150 miles up.</p>
+                                                </div>
+                                                <div class="margin-10 right-news">
+                                                    <img src="image/i.png" alt="img" class="img">
+                                                    <p class="ballon color2">Done, Uploading one sec.</p>
+                                                </div>
+                                            </li>
+                                            <li class="news-detail-list">
+                                                <div class="margin-10 left-news">
+                                                    <img src="image/news/profileimg2.png" alt="img" class="img">
+                                                    <p class="ballon color1">Done, Uploading one sec.</p>
+                                                </div>
+                                                <div class="margin-10 right-news">
+                                                    <img src="image/i.png" alt="img" class="img">
+                                                    <p class="ballon color2">Here ༼ つ ◕_◕ ༽つ</p>
+                                                </div>
+                                                <div class="margin-10 news-date">Last Message: <b>1 hours</b> ago</div>
+                                                <div class="margin-10 left-news">
+                                                    <img src="image/news/profileimg2.png" alt="img" class="img">
+                                                    <p class="ballon color1">Problems look mighty small from 150 miles up.</p>
+                                                </div>
+                                                <div class="margin-10 left-news">
+                                                    <img src="image/news/profileimg2.png" alt="img" class="img">
+                                                    <p class="ballon color1">Thanks, it works perfectly</p>
+                                                </div>
+                                                <div class="margin-10 right-news">
+                                                    <img src="image/i.png" alt="img" class="img">
+                                                    <p class="ballon color2">Done, Uploading one sec.</p>
+                                                </div>
+                                            </li>
+                                            <li class="news-detail-list">
+                                                <div class="margin-10 left-news">
+                                                    <img src="image/news/profileimg3.png" alt="img" class="img">
+                                                    <p class="ballon color1">Uploading one sec.</p>
+                                                </div>
+                                                <div class="margin-10 right-news">
+                                                    <img src="image/i.png" alt="img" class="img">
+                                                    <p class="ballon color2">༼ つ ◕_◕ ༽つ</p>
+                                                </div>
+                                                <div class="margin-10 left-news">
+                                                    <img src="image/news/profileimg3.png" alt="img" class="img">
+                                                    <p class="ballon color1">Problems look mighty small from 150 miles up.</p>
+                                                </div>
+                                                <div class="margin-10 left-news">
+                                                    <img src="image/news/profileimg3.png" alt="img" class="img">
+                                                    <p class="ballon color1">Thanks, it works perfectly</p>
+                                                </div>
+                                                <div class="margin-10 right-news">
+                                                    <img src="image/i.png" alt="img" class="img">
+                                                    <p class="ballon color2">Done, Uploading one sec.</p>
+                                                </div>
+                                            </li>
+                                            <li class="news-detail-list">
+                                                <div class="margin-10 left-news">
+                                                    <img src="image/news/profileimg4.png" alt="img" class="img">
+                                                    <p class="ballon color1">Uploading one sec.</p>
+                                                </div>
+                                                <div class="margin-10 right-news">
+                                                    <img src="image/i.png" alt="img" class="img">
+                                                    <p class="ballon color2">༼ つ ◕_◕ ༽つ</p>
+                                                </div>
+                                                <div class="margin-10 left-news">
+                                                    <img src="image/news/profileimg4.png" alt="img" class="img">
+                                                    <p class="ballon color1">Problems look mighty small from 150 miles up.</p>
+                                                </div>
+                                                <div class="margin-10 left-news">
+                                                    <img src="image/news/profileimg4.png" alt="img" class="img">
+                                                    <p class="ballon color1">Thanks, it works perfectly</p>
+                                                </div>
+                                                <div class="margin-10 right-news">
+                                                    <img src="image/i.png" alt="img" class="img">
+                                                    <p class="ballon color2">Done, Uploading one sec.</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- End Conv -->
+                                        <div class="write">
+                                            <form class="margin-b-20">
+                                                <p>
+                                                    <textarea class="textarea form-control wysihtml5-textarea" placeholder="Enter text ..." style="width:100%;"></textarea>
+                                                </p>
+                                                <button class="btn btn-default send-btn">Send Post</button>
+                                                <button type="reset" class="btn send-btn margin-l-5">Clear</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Js -->
+<script src="js/jquery-2.2.3.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="js/waves.js"></script>
+<script src="js/admin.js"></script>
+<script>
+    $('.news-list').click(function(){
+        $(this).addClass('current').siblings().removeClass('current');
+        $('.news-detail-list').eq($(this).index()-1).addClass('current').siblings().removeClass('current');
+        $('.news-title').text("昵称：" + $(this).find('.from').text())
+    })
+</script>
+
+
+
+</body>
+</html>

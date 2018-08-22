@@ -22,7 +22,9 @@
 ul{
     list-style: none!important;
 }
-
+a:hover{
+    text-decoration: none!important;
+}
 .modification{
     cursor: pointer;
     color: #F44336;
@@ -53,7 +55,7 @@ ul{
 .preview:hover{
     cursor: pointer;
     color: #03A9F4;
-    text-decoration: none;
+    /*text-decoration: none;*/
 }
 #account-select{
     padding: 6px 10px;
@@ -105,14 +107,269 @@ ul{
 .page-view{
     text-align: right;
 }
+.waves-effect>a{
+    color: #fff;
+}
+.waves-effect>a:hover{
+    color: #fff;
+}
+.modified-data{
+    color: #03A9F4;
+}
+.modified-data:hover{
+    color: #03A9F4;
+}
+.mailbox-controls .btn-default.btn-sm .fa{
+    font-size: inherit;
+    top: 1px;
+}
+.btn.btn-default.btn-sm{
+    background-color: #f4f4f4!important;
+    color: #444;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #ddd;
+}
+.btn-group.remove-shadow{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.prev-next{
+    margin-left: 8px;
+}
+/*waiting for reply style*/
+.news-hint{
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.padding-0 {
+    padding: 0px;
+}
+.mailbox-menu .menu {
+    padding: 11px 0;
+    margin-bottom: 0;
+}
+.mailbox-inbox li:hover{
+    background: rgba(182,222,255,.4);
+}
+.mailbox-inbox li.search:hover{
+    background: transparent;
+}
+.mailbox-menu .menu>li {
+    display: inline;
+    color: #76747A;
+    font-size: 15px;
+    padding: 16px 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+.mailbox-menu .menu>li>a{
+     color: #76747A;
+     border-radius: 3px;
+     padding: 15px 19px;
+}
+.mailbox-menu .menu li .fa {
+    font-size: 16px;
+    color: #666;
+    margin-right: 5px;
+}
+.mailbox-menu {
+    background: #fff;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+.mailbox-inbox .search {
+    padding: 23px 20px;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.mailbox-inbox .mailbox-search {
+    border-radius: 999px;
+    border: none;
+    height: 32px;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 36px;
+    background: rgba(0, 0, 0, 0.07);
+    color: #333;
+    box-shadow: none;
+}
+.searchbutton {
+    border: none;
+    color: rgba(0, 0, 0, 0.5);
+    background: none;
+    position: absolute;
+    font-size: 16px;
+    right: 35px;
+    top: 27px;
+}
+.mailbox-inbox .item {
+    display: block;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    color: #76747A;
+    position: relative;
+    font-size: 12px;
+}
+.mailbox-inbox .img {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    float: left;
+    margin-right: 10px;
+}
+.mailbox-inbox .from {
+    font-size: 13px;
+    display: block;
+    color: #333;
+    line-height: 23px;
+}
+.mailbox-inbox .date {
+    position: absolute;
+    font-size: 10px;
+    right: 20px;
+    top: 20px;
+    opacity: 0.7;
+    line-height: 23px;
+}
+.chat {
+    border-left: 1px solid #ddd;
+    margin-left: -1px;
+}
+.chat .title {
+    padding: 12px 20px;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+.chat .title h1 {
+    display: inline-block;
+    margin: 0;
+    font-size: 19px;
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #37363e;
+    margin-right: 5px;
+}
+.chat .title .btn-group {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.title .btn.btn-icon.btn-sm.btn-light{
+    color: inherit;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #BDC4C9;
+}
+.title .btn.btn-icon.btn-sm.btn-light>i{
+    color: #58666e;
+    font-size: 15px;
+}
+.chat .conv {
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 0;
+}
+.chat .conv .img {
+    border-radius: 999px;
+    width: 50px;
+    height: 50px;
+}
+.chat .conv .ballon {
+    display: inline-table;
+    padding: 14px 20px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    margin-left: 20px;
+}
+.chat .conv .color1 {
+    background: #B9F98E;
+    color: #0A451D;
+}
+.chat .conv .color2 {
+    background: #B6DEFF;
+    color: #153440;
+}
+.right-news{
+    overflow: hidden;
+}
+.right-news>img, .right-news>p{
+    float: right;
+}
+.right-news .ballon{
+    margin-right: 20px;
+}
+.news-date{
+    text-align: center;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 10px 0;
+    font-size: 11px;
+}
+.margin-10{
+    margin: 10px 0px;
+}
+.news-list.current{
+    background: rgba(182,222,255,.4);
+}
+.news-detail-list{
+    display: none;
+}
+.news-detail-list.current{
+    display: block;
+}
 
 
 
 
 
-
-
-
-
-
-
+.mailbox .write {
+    padding: 20px;
+    background: #fff;
+}
+.margin-b-20 {
+    margin-bottom: 20px;
+}
+.form-control {
+    height: 34px;
+    border-radius: 3px;
+    padding-left: 10px;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #BDC4C9;
+    display: block;
+    box-shadow: inset 0px 1px 0px #F1F0F1;
+}
+.btn.send-btn {
+    font-size: 14px;
+    padding: 7px 20px 7px 20px;
+    border: none;
+    background: #e4e4e4;
+    color: inherit;
+    border-radius: 3px;
+}
+.send-btn.btn-default {
+    background-color: #399bff!important;
+    color: #fff;
+}
+.margin-l-5 {
+    margin-left: 5px;
+}
+@media screen and (max-width: 760px){
+    .mailbox-menu .menu li {
+        display: block;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+}
