@@ -16,6 +16,16 @@
     <link rel="stylesheet" href="css/materialize.css">
     <link rel="stylesheet" href="css/all-themes.css">
     <link rel="stylesheet" href="css/common.css">
+    <style>
+        .dataTables_filter>label, .dataTables_paginate.paging_simple_numbers{
+            float: right;
+        }
+        .dataTables_info{
+            float: left;
+            line-height: 30px;
+        }
+
+    </style>
 </head>
 <body class="theme-red">
 <!-- Page Loader -->
@@ -68,7 +78,7 @@
                         <li class="header">消息通知</li>
                         <li class="body">
                             <ul class="menu">
-                                <li>
+                                <li data-toggle="modal" data-target=".bs-example-modal-lg">
                                     <a href="javascript:void(0);">
                                         <div class="icon-circle bg-light-green">
                                             <i class="material-icons">comment</i>
@@ -81,7 +91,7 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li data-toggle="modal" data-target=".bs-example-modal-lg">
                                     <a href="javascript:void(0);">
                                         <div class="icon-circle bg-light-green">
                                             <i class="material-icons">comment</i>
@@ -94,7 +104,7 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li data-toggle="modal" data-target=".bs-example-modal-lg">
                                     <a href="javascript:void(0);">
                                         <div class="icon-circle bg-light-green">
                                             <i class="material-icons">comment</i>
@@ -107,7 +117,7 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li data-toggle="modal" data-target=".bs-example-modal-lg">
                                     <a href="javascript:void(0);">
                                         <div class="icon-circle bg-light-green">
                                             <i class="material-icons">comment</i>
@@ -144,11 +154,7 @@
                 <div class="btn-group user-helper-dropdown">
                     <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                     <ul class="dropdown-menu pull-right">
-                        <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
-                        <li role="seperator" class="divider"></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
+                        <li><a href="account-list.html"><i class="material-icons">person</i>Profile</a></li>
                         <li role="seperator" class="divider"></li>
                         <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
                     </ul>
@@ -189,10 +195,10 @@
                                 <span>产品管理</span>
                             </a>
                             <ul class="ml-menu">
-                                <li><a href="upload-form.html">上传产品</a></li>
-                                <li class="active"><a href="javascript:void(0);">产品统计</a></li>
                                 <li><a href="product-generate.html">产品生成</a></li>
                                 <li><a href="table-form-making.html">产品表格制作</a></li>
+                                <li><a href="upload-form.html">上传产品</a></li>
+                                <li class="active"><a href="javascript:void(0);">历史纪录</a></li>
                             </ul>
                         </li>
                         <li>
@@ -222,12 +228,10 @@
                     <ul class="ml-menu">
                         <li>
                             <a href="javascript:void(0);" class="menu-toggle">
-                                <span>基本设置</span>
+                                <span>管理账号</span>
                             </a>
                             <ul class="ml-menu">
-                                <li><a href="new-subaccount.html">新增子账号</a></li>
                                 <li><a href="account-list.html">账号列表</a></li>
-                                <li><a href="account-information.html">资料编辑</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -252,72 +256,156 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            产品统计
-                            <small></small>
+                            历史纪录
                         </h2>
                     </div>
-                    <div class="body table-responsive">
-                        <table class="table table-hover js-basic-example dataTable">
-                            <thead>
-                            <tr>
-                                <th>编号</th>
-                                <th>账户名称</th>
-                                <th>产品数量</th>
-                                <th>上传表格</th>
-                                <th>操作</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>tanyh32@hotmail.com</td>
-                                <td>1234</td>
-                                <td>鼠标垫.xls</td>
-                                <td><a href="production-statistics-show.html" class="preview">查看</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>tanyh32@hotmail.com</td>
-                                <td>4561</td>
-                                <td>桌旗.xls</td>
-                                <td><a href="production-statistics-show.html" class="preview">查看</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>tanyh32@hotmail.com</td>
-                                <td>4587</td>
-                                <td>花园旗.xls</td>
-                                <td><a href="production-statistics-show.html" class="preview">查看</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>tanyh32@hotmail.com</td>
-                                <td>789</td>
-                                <td>抱枕.xls</td>
-                                <td><a href="production-statistics-show.html" class="preview">查看</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>tanyh32@hotmail.com</td>
-                                <td>7845</td>
-                                <td>窗帘.xls</td>
-                                <td><a href="production-statistics-show.html" class="preview">查看</a></td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    <div class="body">
+                        <div class="table-responsive">
+                            <table class="table table-hover dataTable js-exportable">
+                                <thead>
+                                <tr>
+                                    <th>编号</th>
+                                    <th>账户名称</th>
+                                    <th>产品数量</th>
+                                    <th>上传表格</th>
+                                    <th>状态</th>
+                                    <!--<th>操作</th>-->
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>tanyh32@hotmail.com</td>
+                                    <td>1234</td>
+                                    <td>鼠标垫.xls</td>
+                                    <td>上传成功</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>tanyh32@hotmail.com</td>
+                                    <td>4561</td>
+                                    <td>桌旗.xls</td>
+                                    <td>上传成功</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>tanyh32@hotmail.com</td>
+                                    <td>7845</td>
+                                    <td>窗帘.xls</td>
+                                    <td>上传成功</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>tanyh32@hotmail.com</td>
+                                    <td>789</td>
+                                    <td>抱枕.xls</td>
+                                    <td>上传成功</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>tanyh32@hotmail.com</td>
+                                    <td>4587</td>
+                                    <td>花园旗.xls</td>
+                                    <td>上传成功</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>tanyh32@hotmail.com</td>
+                                    <td>4587</td>
+                                    <td>窗帘.xls</td>
+                                    <td>上传成功</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7</th>
+                                    <td>tanyh32@hotmail.com</td>
+                                    <td>789</td>
+                                    <td>抱枕.xls</td>
+                                    <td>上传成功</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">8</th>
+                                    <td>tanyh32@hotmail.com</td>
+                                    <td>789</td>
+                                    <td>花园旗.xls</td>
+                                    <td>上传成功</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">9</th>
+                                    <td>tanyh32@hotmail.com</td>
+                                    <td>789</td>
+                                    <td>桌旗.xls</td>
+                                    <td>上传成功</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">10</th>
+                                    <td>tanyh32@hotmail.com</td>
+                                    <td>789</td>
+                                    <td>背包.xls</td>
+                                    <td>上传成功</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">11</th>
+                                    <td>tanyh32@hotmail.com</td>
+                                    <td>789</td>
+                                    <td>钱包.xls</td>
+                                    <td>上传成功</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">12</th>
+                                    <td>tanyh32@hotmail.com</td>
+                                    <td>789</td>
+                                    <td>雨伞.xls</td>
+                                    <td>上传成功</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">13</th>
+                                    <td>tanyh32@hotmail.com</td>
+                                    <td>789</td>
+                                    <td>太阳伞.xls</td>
+                                    <td>上传成功</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+
     </div>
 </section>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modalContent">
+            <div class="modal-header modalHeader">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">通知详情</h4>
+            </div>
+            <div class="modal-body modalBody">
+                webOS also known as LG webOS and Open webOS, is a Linux-based operating system for smart TVs, and formerly a mobile operating system. Initially developed by Palm, which was acquired by Hewlett-Packard, the operating system was later sold to LG Electronics. Through all iterations of the operating system (Palm, HP and now LG) the official name has been consistently stylized as webOS (lowercase 'w'). Palm launched WebOS in January 2009, then called Palm WebOS. Various versions of WebOS have been featured on several devices, including Pre, Pixi, and Veer phones and the HP TouchPad tablet. The latest version, 3.0.5, was released on January 12, 2012. After abandoning the TouchPad and the proposed sale of the HP Personal Systems Group, HP made the platform open source, and it became Open WebOS. Code specific to the existing devices was released as WebOS Community Edition (CE), with support for the existing HP hardware. Open WebOS includes open source libraries designed to target a wider range of hardware.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">下一条</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Js -->
 <script src="js/jquery-2.2.3.min.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
+<script src="js/bootstrap-select.js"></script>
 <script src="js/jquery.slimscroll.js"></script>
 <script src="js/waves.js"></script>
 <script src="js/jquery.dataTables.js"></script>
 <script src="js/dataTables.bootstrap.js"></script>
+<script src="js/dataTables.buttons.min.js"></script>
+<script src="js/buttons.flash.min.js"></script>
+<script src="js/jszip.min.js"></script>
+<script src="js/buttons.html5.min.js"></script>
+<script src="js/buttons.print.min.js"></script>
 <script src="js/admin.js"></script>
 <script src="js/jquery-datatable.js"></script>
 </body>

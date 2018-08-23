@@ -72,7 +72,7 @@
                         <li class="header">消息通知</li>
                         <li class="body">
                             <ul class="menu">
-                                <li>
+                                <li data-toggle="modal" data-target=".bs-example-modal-lg">
                                     <a href="javascript:void(0);">
                                         <div class="icon-circle bg-light-green">
                                             <i class="material-icons">comment</i>
@@ -85,7 +85,7 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li data-toggle="modal" data-target=".bs-example-modal-lg">
                                     <a href="javascript:void(0);">
                                         <div class="icon-circle bg-light-green">
                                             <i class="material-icons">comment</i>
@@ -98,7 +98,7 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li data-toggle="modal" data-target=".bs-example-modal-lg">
                                     <a href="javascript:void(0);">
                                         <div class="icon-circle bg-light-green">
                                             <i class="material-icons">comment</i>
@@ -111,7 +111,7 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li data-toggle="modal" data-target=".bs-example-modal-lg">
                                     <a href="javascript:void(0);">
                                         <div class="icon-circle bg-light-green">
                                             <i class="material-icons">comment</i>
@@ -149,11 +149,7 @@
                 <div class="btn-group user-helper-dropdown">
                     <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                     <ul class="dropdown-menu pull-right">
-                        <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
-                        <li role="seperator" class="divider"></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
+                        <li><a href="account-list.html"><i class="material-icons">person</i>Profile</a></li>
                         <li role="seperator" class="divider"></li>
                         <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
                     </ul>
@@ -194,10 +190,10 @@
                                 <span>产品管理</span>
                             </a>
                             <ul class="ml-menu">
-                                <li><a href="upload-form.html">上传产品</a></li>
-                                <li><a href="production-statistics.html">产品统计</a></li>
                                 <li><a href="product-generate.html">产品生成</a></li>
                                 <li><a href="table-form-making.html">产品表格制作</a></li>
+                                <li><a href="upload-form.html">上传产品</a></li>
+                                <li><a href="production-statistics.html">历史纪录</a></li>
                             </ul>
                         </li>
                         <li class="active">
@@ -227,12 +223,10 @@
                     <ul class="ml-menu">
                         <li>
                             <a href="javascript:void(0);" class="menu-toggle">
-                                <span>基本设置</span>
+                                <span>管理账号</span>
                             </a>
                             <ul class="ml-menu">
-                                <li><a href="new-subaccount.html">新增子账号</a></li>
                                 <li><a href="account-list.html">账号列表</a></li>
-                                <li><a href="account-information.html">资料编辑</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -461,6 +455,23 @@
         </div>
     </div>
 </section>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modalContent">
+            <div class="modal-header modalHeader">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">通知详情</h4>
+            </div>
+            <div class="modal-body modalBody">
+                webOS also known as LG webOS and Open webOS, is a Linux-based operating system for smart TVs, and formerly a mobile operating system. Initially developed by Palm, which was acquired by Hewlett-Packard, the operating system was later sold to LG Electronics. Through all iterations of the operating system (Palm, HP and now LG) the official name has been consistently stylized as webOS (lowercase 'w'). Palm launched WebOS in January 2009, then called Palm WebOS. Various versions of WebOS have been featured on several devices, including Pre, Pixi, and Veer phones and the HP TouchPad tablet. The latest version, 3.0.5, was released on January 12, 2012. After abandoning the TouchPad and the proposed sale of the HP Personal Systems Group, HP made the platform open source, and it became Open WebOS. Code specific to the existing devices was released as WebOS Community Edition (CE), with support for the existing HP hardware. Open WebOS includes open source libraries designed to target a wider range of hardware.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">下一条</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Js -->
 <script src="js/jquery-2.2.3.min.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>

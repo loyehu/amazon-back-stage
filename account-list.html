@@ -16,6 +16,15 @@
     <link href="css/materialize.css" rel="stylesheet">
     <link href="css/all-themes.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
+    <style>
+        .dataTables_filter>label, .dataTables_paginate.paging_simple_numbers{
+            float: right;
+        }
+        .dataTables_info{
+            float: left;
+            line-height: 30px;
+        }
+    </style>
 </head>
 <body class="theme-red">
 <!-- Page Loader -->
@@ -68,7 +77,7 @@
                         <li class="header">消息通知</li>
                         <li class="body">
                             <ul class="menu">
-                                <li>
+                                <li data-toggle="modal" data-target=".bs-example-modal-lg">
                                     <a href="javascript:void(0);">
                                         <div class="icon-circle bg-light-green">
                                             <i class="material-icons">comment</i>
@@ -81,7 +90,7 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li data-toggle="modal" data-target=".bs-example-modal-lg">
                                     <a href="javascript:void(0);">
                                         <div class="icon-circle bg-light-green">
                                             <i class="material-icons">comment</i>
@@ -94,7 +103,7 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li data-toggle="modal" data-target=".bs-example-modal-lg">
                                     <a href="javascript:void(0);">
                                         <div class="icon-circle bg-light-green">
                                             <i class="material-icons">comment</i>
@@ -107,7 +116,7 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li data-toggle="modal" data-target=".bs-example-modal-lg">
                                     <a href="javascript:void(0);">
                                         <div class="icon-circle bg-light-green">
                                             <i class="material-icons">comment</i>
@@ -145,11 +154,7 @@
                 <div class="btn-group user-helper-dropdown">
                     <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                     <ul class="dropdown-menu pull-right">
-                        <li><a href="javascript:void(0);"><i class="material-icons">person</i>Profile</a></li>
-                        <li role="seperator" class="divider"></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">group</i>Followers</a></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
-                        <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
+                        <li><a href="account-list.html"><i class="material-icons">person</i>Profile</a></li>
                         <li role="seperator" class="divider"></li>
                         <li><a href="javascript:void(0);"><i class="material-icons">input</i>Sign Out</a></li>
                     </ul>
@@ -190,10 +195,10 @@
                                 <span>产品管理</span>
                             </a>
                             <ul class="ml-menu">
-                                <li><a href="upload-form.html">上传产品</a></li>
-                                <li><a href="production-statistics.html">产品统计</a></li>
                                 <li><a href="product-generate.html">产品生成</a></li>
                                 <li><a href="table-form-making.html">产品表格制作</a></li>
+                                <li><a href="upload-form.html">上传产品</a></li>
+                                <li><a href="production-statistics.html">历史纪录</a></li>
                             </ul>
                         </li>
                         <li>
@@ -223,12 +228,10 @@
                     <ul class="ml-menu">
                         <li class="active">
                             <a href="javascript:void(0);" class="menu-toggle">
-                                <span>基本设置</span>
+                                <span>管理账号</span>
                             </a>
                             <ul class="ml-menu">
-                                <li><a href="new-subaccount.html">新增子账号</a></li>
                                 <li class="active"><a href="javascript:void(0);">账号列表</a></li>
-                                <li><a href="account-information.html">资料编辑</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -242,7 +245,6 @@
         </div>
     </aside>
 </section>
-
 <section class="content">
     <div class="container-fluid">
         <div class="block-header">
@@ -258,8 +260,9 @@
                             <small>不同账号的不同角色承担不同责任</small>
                         </h2>
                     </div>
-                    <div class="body table-responsive">
-                        <table class="table table-striped">
+                    <div class="body table-responsive tableResponsive">
+                        <button type="button" class="btn btn-primary accountModalBtn" data-toggle="modal" data-target="#accountModal">新建子账号</button>
+                        <table class="table table-striped dataTable js-exportable">
                             <thead>
                             <tr>
                                 <th>序号</th>
@@ -280,7 +283,7 @@
                                 <td>mdo</td>
                                 <td>15648975632</td>
                                 <td>正常</td>
-                                <td><a class="modified-data" href="modified-data.html">修改</a></td>
+                                <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifyAccountModal">修改</a></td>
                                 <td class="modification">删除</td>
                             </tr>
                             <tr>
@@ -290,7 +293,7 @@
                                 <td>Thornton</td>
                                 <td>15648975632</td>
                                 <td>正常</td>
-                                <td><a class="modified-data" href="modified-data.html">修改</a></td>
+                                <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifyAccountModal">修改</a></td>
                                 <td class="modification">删除</td>
                             </tr>
                             <tr>
@@ -300,7 +303,7 @@
                                 <td>Bird</td>
                                 <td>15648975632</td>
                                 <td>正常</td>
-                                <td><a class="modified-data" href="modified-data.html">修改</a></td>
+                                <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifyAccountModal">修改</a></td>
                                 <td class="modification">删除</td>
                             </tr>
                             <tr>
@@ -310,7 +313,7 @@
                                 <td>lajelly</td>
                                 <td>15648975632</td>
                                 <td>正常</td>
-                                <td><a class="modified-data" href="modified-data.html">修改</a></td>
+                                <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifyAccountModal">修改</a></td>
                                 <td class="modification">删除</td>
                             </tr>
                             <tr>
@@ -320,40 +323,243 @@
                                 <td>Kikat</td>
                                 <td>15648975632</td>
                                 <td>正常</td>
-                                <td><a class="modified-data" href="modified-data.html">修改</a></td>
+                                <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifyAccountModal">修改</a></td>
                                 <td class="modification">删除</td>
                             </tr>
                             </tbody>
                         </table>
-                        <nav class="page-view">
-                            <ul class="pagination">
-                                <li class="disabled">
-                                    <a href="javascript:void(0);">
-                                        <i class="material-icons">chevron_left</i>
-                                    </a>
-                                </li>
-                                <li class="active"><a href="javascript:void(0);">1</a></li>
-                                <li><a href="javascript:void(0);" class="waves-effect">2</a></li>
-                                <li><a href="javascript:void(0);" class="waves-effect">3</a></li>
-                                <li><a href="javascript:void(0);" class="waves-effect">4</a></li>
-                                <li><a href="javascript:void(0);" class="waves-effect">5</a></li>
-                                <li>
-                                    <a href="javascript:void(0);" class="waves-effect">
-                                        <i class="material-icons">chevron_right</i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!-- 消息 modal -->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modalContent">
+            <div class="modal-header modalHeader">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">通知详情</h4>
+            </div>
+            <div class="modal-body modalBody">
+                webOS also known as LG webOS and Open webOS, is a Linux-based operating system for smart TVs, and formerly a mobile operating system. Initially developed by Palm, which was acquired by Hewlett-Packard, the operating system was later sold to LG Electronics. Through all iterations of the operating system (Palm, HP and now LG) the official name has been consistently stylized as webOS (lowercase 'w'). Palm launched WebOS in January 2009, then called Palm WebOS. Various versions of WebOS have been featured on several devices, including Pre, Pixi, and Veer phones and the HP TouchPad tablet. The latest version, 3.0.5, was released on January 12, 2012. After abandoning the TouchPad and the proposed sale of the HP Personal Systems Group, HP made the platform open source, and it became Open WebOS. Code specific to the existing devices was released as WebOS Community Edition (CE), with support for the existing HP hardware. Open WebOS includes open source libraries designed to target a wider range of hardware.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">下一条</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 新建子账号 modal -->
+<div class="modal fade" tabindex="-1"  id="accountModal" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modalContent">
+            <div class="modal-header modalHeader">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">新建账号</h4>
+            </div>
+            <div class="modal-body modalBody">
+                <form class="form-horizontal">
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label for="email_address_2">账户名称</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="form-line">
+                                    <input type="text" id="email_address_2" class="form-control" placeholder="Enter your account name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label for="password_2">账户密码</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="form-line">
+                                    <input type="password" id="password_2" class="form-control" placeholder="Enter your account password">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label for="confirm_password">确认密码</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="form-line">
+                                    <input type="password" id="confirm_password" class="form-control" placeholder="Retype the password to confirm it">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label for="contact">联系人名</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="form-line">
+                                    <input type="password" id="contact" class="form-control" placeholder="Enter your the Contact">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label for="contact_way">联系方式</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="form-line">
+                                    <input type="password" id="contact_way" class="form-control" placeholder="Enter your the contact information">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label>账户角色</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="demo-radio-button radioButton">
+                                    <input name="group1" type="radio" class="with-gap" id="radio_1" checked="">
+                                    <label for="radio_1">查看统计</label>
+                                    <input name="group1" type="radio" class="with-gap" id="radio_2">
+                                    <label for="radio_2">录入账号</label>
+                                    <input name="group1" type="radio" class="with-gap" id="radio_3">
+                                    <label for="radio_3">产品上传</label>
+                                    <input name="group1" type="radio" id="radio_4" class="with-gap">
+                                    <label for="radio_4">发货</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--修改账号 modal-->
+<div class="modal fade" tabindex="-1"  id="modifyAccountModal" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modalContent">
+            <div class="modal-header modalHeader">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">修改账号资料</h4>
+            </div>
+            <div class="modal-body modalBody">
+                <form class="form-horizontal">
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label>账户名称</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="form-line">
+                                    <textarea rows="1" class="form-control no-resize auto-growth" placeholder="Mark"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label>账户密码</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="form-line">
+                                    <textarea rows="1" class="form-control no-resize auto-growth" placeholder="******"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label>确认密码</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="form-line">
+                                    <textarea rows="1" class="form-control no-resize auto-growth" placeholder="******"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label>联系人名</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="form-line">
+                                    <textarea rows="1" class="form-control no-resize auto-growth" placeholder="mdo"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label>联系方式</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="form-line">
+                                    <textarea rows="1" class="form-control no-resize auto-growth" placeholder="12365478945"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label>账户角色</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="demo-radio-button radioButton">
+                                    <input name="group1" type="radio" class="with-gap" id="radio_a">
+                                    <label for="radio_a">查看统计</label>
+                                    <input name="group1" type="radio" class="with-gap" id="radio_s" checked="">
+                                    <label for="radio_s">录入账号</label>
+                                    <input name="group1" type="radio" class="with-gap" id="radio_d">
+                                    <label for="radio_d">产品上传</label>
+                                    <input name="group1" type="radio" id="radio_f" class="with-gap">
+                                    <label for="radio_f">发货</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Js -->
 <script src="js/jquery-2.2.3.min.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<script src="js/jquery.slimscroll.js"></script>
 <script src="js/waves.js"></script>
+<script src="js/jquery.dataTables.js"></script>
+<script src="js/dataTables.bootstrap.js"></script>
 <script src="js/admin.js"></script>
+<script src="js/jquery-datatable.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>亚马逊后台管理-账户管理</title>
+        <title>亚马逊后台管理-账户管理修改</title>
         <meta name="keywords" content="亚马逊,购物">
         <meta name="description" content="亚马逊后台管理">
         <link rel="icon" href="" type="image/x-icon">
@@ -12,6 +12,7 @@
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/waves.css" rel="stylesheet"/>
         <link href="css/animate.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="css/dropzone.css">
         <link href="css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="css/materialize.css">
         <link rel="stylesheet" href="css/all-themes.css">
@@ -23,12 +24,8 @@
             <div class="loader">
                 <div class="preloader">
                     <div class="spinner-layer pl-red">
-                        <div class="circle-clipper left">
-                            <div class="circle"></div>
-                        </div>
-                        <div class="circle-clipper right">
-                            <div class="circle"></div>
-                        </div>
+                        <div class="circle-clipper left"><div class="circle"></div></div>
+                        <div class="circle-clipper right"><div class="circle"></div></div>
                     </div>
                 </div>
                 <p>Please wait...</p>
@@ -38,9 +35,13 @@
         <div class="overlay"></div>
         <!-- Search Bar -->
         <div class="search-bar">
-            <div class="search-icon"><i class="material-icons">search</i></div>
+            <div class="search-icon">
+                <i class="material-icons">search</i>
+            </div>
             <input type="text" placeholder="START TYPING...">
-            <div class="close-search"><i class="material-icons">close</i></div>
+            <div class="close-search">
+                <i class="material-icons">close</i>
+            </div>
         </div>
         <!-- Top Bar -->
         <nav class="navbar">
@@ -158,8 +159,8 @@
                                 <span>账号资料管理</span>
                             </a>
                             <ul class="ml-menu">
-                                <li class="active"><a href="javascript:void(0);">账户管理</a></li>
-                                <li><a href="data-entry.html">资料录入</a></li>
+                                <li><a href="manage-account.html">账户管理</a></li>
+                                <li class="active"><a href="javascript:void(0);">资料录入</a></li>
                             </ul>
                         </li>
                         <li>
@@ -232,205 +233,103 @@
                 </div>
             </aside>
         </section>
-        <!--content-->
         <section class="content">
             <div class="container-fluid">
-                <div class="block-header">
-                    <h2>
-                        账户资料管理
-                        <small>工欲善其事，必先利其器</small>
-                    </h2>
-                </div>
-                <!-- Basic Examples -->
+                <div class="block-header"><h2>账户管理</h2></div>
+                <!-- Vertical Layout -->
                 <div class="row clearfix">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
-                            <div class="header"><h2>账户管理</h2></div>
+                            <div class="header"><h2>账户资料修改</h2></div>
                             <div class="body">
-                                <div class="table-responsive" style=" overflow-x: visible;">
-                                    <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
-                                        <thead>
-                                            <tr>
-                                                <th>账户名称</th>
-                                                <th>亚马逊平台账号</th>
-                                                <th>国家</th>
-                                                <th>邮箱地址</th>
-                                                <th>联系方式</th>
-                                                <th>负责人</th>
-                                                <th>收款人</th>
-                                                <th>服务器IP地址</th>
-                                                <th>编辑</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Tiger</td>
-                                                <td>Usnixon</td>
-                                                <td>US</td>
-                                                <td>Edinburgh@server.com</td>
-                                                <td>15648975213</td>
-                                                <td>nixon</td>
-                                                <td>jsonmo</td>
-                                                <td>120.056.056.1</td>
-                                                <td>
-                                                    <a href="manage-account-modify.html" class="modification">修改</a>
-                                                    /
-                                                    <span class="cancel">删除</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tiger</td>
-                                                <td>Usnixon</td>
-                                                <td>US</td>
-                                                <td>Edinburgh@server.com</td>
-                                                <td>15648975213</td>
-                                                <td>nixon</td>
-                                                <td>jsonmo</td>
-                                                <td>120.056.056.1</td>
-                                                <td>
-                                                    <a href="manage-account-modify.html" class="modification">修改</a>
-                                                    /
-                                                    <span class="cancel">删除</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tiger</td>
-                                                <td>Usnixon</td>
-                                                <td>US</td>
-                                                <td>Edinburgh@server.com</td>
-                                                <td>15648975213</td>
-                                                <td>nixon</td>
-                                                <td>jsonmo</td>
-                                                <td>120.056.056.1</td>
-                                                <td>
-                                                    <a href="manage-account-modify.html" class="modification">修改</a>
-                                                    /
-                                                    <span class="cancel">删除</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tiger</td>
-                                                <td>Usnixon</td>
-                                                <td>US</td>
-                                                <td>Edinburgh@server.com</td>
-                                                <td>15648975213</td>
-                                                <td>nixon</td>
-                                                <td>jsonmo</td>
-                                                <td>120.056.056.1</td>
-                                                <td>
-                                                    <a href="manage-account-modify.html" class="modification">修改</a>
-                                                    /
-                                                    <span class="cancel">删除</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tiger</td>
-                                                <td>Usnixon</td>
-                                                <td>US</td>
-                                                <td>Edinburgh@server.com</td>
-                                                <td>15648975213</td>
-                                                <td>nixon</td>
-                                                <td>jsonmo</td>
-                                                <td>120.056.056.1</td>
-                                                <td>
-                                                    <a href="manage-account-modify.html" class="modification">修改</a>
-                                                    /
-                                                    <span class="cancel">删除</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tiger</td>
-                                                <td>Usnixon</td>
-                                                <td>US</td>
-                                                <td>Edinburgh@server.com</td>
-                                                <td>15648975213</td>
-                                                <td>nixon</td>
-                                                <td>jsonmo</td>
-                                                <td>120.056.056.1</td>
-                                                <td>
-                                                    <a href="manage-account-modify.html" class="modification">修改</a>
-                                                    /
-                                                    <span class="cancel">删除</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tiger</td>
-                                                <td>Usnixon</td>
-                                                <td>US</td>
-                                                <td>Edinburgh@server.com</td>
-                                                <td>15648975213</td>
-                                                <td>nixon</td>
-                                                <td>jsonmo</td>
-                                                <td>120.056.056.1</td>
-                                                <td>
-                                                    <a href="manage-account-modify.html" class="modification">修改</a>
-                                                    /
-                                                    <span class="cancel">删除</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tiger</td>
-                                                <td>Usnixon</td>
-                                                <td>US</td>
-                                                <td>Edinburgh@server.com</td>
-                                                <td>15648975213</td>
-                                                <td>nixon</td>
-                                                <td>jsonmo</td>
-                                                <td>120.056.056.1</td>
-                                                <td>
-                                                    <a href="manage-account-modify.html" class="modification">修改</a>
-                                                    /
-                                                    <span class="cancel">删除</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tiger</td>
-                                                <td>Usnixon</td>
-                                                <td>US</td>
-                                                <td>Edinburgh@server.com</td>
-                                                <td>15648975213</td>
-                                                <td>nixon</td>
-                                                <td>jsonmo</td>
-                                                <td>120.056.056.1</td>
-                                                <td>
-                                                    <a href="manage-account-modify.html" class="modification">修改</a>
-                                                    /
-                                                    <span class="cancel">删除</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tiger</td>
-                                                <td>Usnixon</td>
-                                                <td>US</td>
-                                                <td>Edinburgh@server.com</td>
-                                                <td>15648975213</td>
-                                                <td>nixon</td>
-                                                <td>jsonmo</td>
-                                                <td>120.056.056.1</td>
-                                                <td>
-                                                    <a href="manage-account-modify.html" class="modification">修改</a>
-                                                    /
-                                                    <span class="cancel">删除</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tiger</td>
-                                                <td>Usnixon</td>
-                                                <td>US</td>
-                                                <td>Edinburgh@server.com</td>
-                                                <td>15648975213</td>
-                                                <td>nixon</td>
-                                                <td>jsonmo</td>
-                                                <td>120.056.056.1</td>
-                                                <td>
-                                                    <a href="manage-account-modify.html" class="modification">修改</a>
-                                                    /
-                                                    <span class="cancel">删除</span>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div>
+                                    <label for="account_title">账户名称</label>
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" id="account_title" class="form-control" placeholder="Tiger">
+                                        </div>
+                                    </div>
+                                    <label for="platform_account">亚马逊平台账号</label>
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" id="platform_account" class="form-control" placeholder="Usnixon">
+                                        </div>
+                                    </div>
+                                    <label for="country">国家</label>
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="password" id="Country" class="form-control" placeholder="US">
+                                        </div>
+                                    </div>
+                                    <label for="platform_password">平台密码</label>
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="password" id="platform_password" class="form-control" placeholder="**********">
+                                        </div>
+                                    </div>
+                                    <label for="Email_address">邮箱地址</label>
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" id="Email_address" class="form-control" placeholder="Edinburgh@server.com">
+                                        </div>
+                                    </div>
+                                    <label for="Email_password">联系方式</label>
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="password" id="Email_password" class="form-control" placeholder="15648975213">
+                                        </div>
+                                    </div>
+                                    <label for="principal">负责人</label>
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" id="principal" class="form-control" placeholder="nixon">
+                                        </div>
+                                    </div>
+                                    <label for="payee">收款人</label>
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="password" id="payee" class="form-control" placeholder="jsonmo">
+                                        </div>
+                                    </div>
+                                    <label for="ip_address">服务器IP地址</label>
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" id="ip_address" class="form-control" placeholder="120.056.056.1">
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="row clearfix">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="card">
+                                            <div class="header">
+                                                <h2>
+                                                    上传身份证和营业执照照片
+                                                    <small>身份证照片上传正反面</small>
+                                                </h2>
+                                            </div>
+                                            <div class="body">
+                                                <form action="/" id="frmFileUpload" class="dropzone dz-clickable" method="post" enctype="multipart/form-data">
+                                                    <div class="dz-message">
+                                                        <div class="drag-icon-cph">
+                                                            <i class="material-icons">touch_app</i>
+                                                        </div>
+                                                        <h3>点击上传内容</h3>
+                                                        <em>上传照片缩略图，图片大小不超过50kb</em>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <label for="secondary_validation">二次验证密钥</label>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="text" id="secondary_validation" class="form-control" placeholder="Enter your secondary verification key">
+                                    </div>
+                                </div>
+                                <div class="erweima">二维码</div>
+                                <button type="button" class="btn btn-primary m-t-15 waves-effect">提交</button>
                             </div>
                         </div>
                     </div>
@@ -457,11 +356,8 @@
         <!-- Js -->
         <script src="js/jquery-2.2.3.min.js"></script>
         <script src="bootstrap/js/bootstrap.js"></script>
-        <script src="js/jquery.slimscroll.js"></script>
+        <script src="js/dropzone.js"></script>
         <script src="js/waves.js"></script>
-        <script src="js/jquery.dataTables.js"></script>
-        <script src="js/dataTables.bootstrap.js"></script>
         <script src="js/admin.js"></script>
-        <script src="js/jquery-datatable.js"></script>
     </body>
 </html>

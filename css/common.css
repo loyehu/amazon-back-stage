@@ -19,6 +19,9 @@
     background-color: rgba(125, 125, 125, 0.1);
     -webkit-border-radius: 6px;
 }
+body {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
 ul{
     list-style: none!important;
 }
@@ -26,6 +29,10 @@ a:hover{
     text-decoration: none!important;
 }
 .modification{
+    cursor: pointer;
+    color: #F44336;
+}
+.modification:hover{
     cursor: pointer;
     color: #F44336;
 }
@@ -371,5 +378,58 @@ a:hover{
         width: 100%;
         border-right: none;
         border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+}
+/*模态框*/
+@media screen and (min-width: 768px){
+    .modal-content.modalContent {
+        -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5) !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,.5) !important;
+    }
+}
+.modal-content.modalContent {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.modal-header.modalHeader {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.modal-body.modalBody{
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.tableResponsive{
+    position: relative;
+}
+.tableResponsive .accountModalBtn{
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    z-index: 1;
+}
+.radioButton{
+    line-height: 35px;
+}
+.padding-10-0{
+    padding: 10px 0;
+}
+
+
+
+
+@media screen and (max-width: 991px){
+    .form-group.formGroup{
+        margin-left: 0;
+    }
+    .form-control-label{
+        text-align: left;
+    }
+}
+@media screen and (min-width: 992px){
+    .selectContainer{
+        padding-left: 0px!important;
+        padding-right: 25px;
     }
 }
