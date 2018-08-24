@@ -415,7 +415,9 @@ a:hover{
 .padding-10-0{
     padding: 10px 0;
 }
-
+.radioButton>label{
+    min-width: 137px;
+}
 
 
 

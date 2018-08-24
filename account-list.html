@@ -268,7 +268,9 @@
                                 <th>序号</th>
                                 <th>用户名</th>
                                 <th>角色</th>
-                                <th>名字</th>
+                                <th>供货商名称</th>
+                                <th>产品名称</th>
+                                <th>产品ID</th>
                                 <th>手机号</th>
                                 <th>状态</th>
                                 <th>修改</th>
@@ -280,8 +282,10 @@
                                 <th scope="row">1</th>
                                 <td>Mark</td>
                                 <td>上传产品</td>
-                                <td>mdo</td>
-                                <td>15648975632</td>
+                                <td>DIVING</td>
+                                <td>雨伞</td>
+                                <td>20102546</td>
+                                <td>18634975215</td>
                                 <td>正常</td>
                                 <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifyAccountModal">修改</a></td>
                                 <td class="modification">删除</td>
@@ -290,8 +294,10 @@
                                 <th scope="row">2</th>
                                 <td>Jacob</td>
                                 <td>查看统计</td>
-                                <td>Thornton</td>
-                                <td>15648975632</td>
+                                <td>THORNTON</td>
+                                <td>花园旗</td>
+                                <td>20101548</td>
+                                <td>13549786245</td>
                                 <td>正常</td>
                                 <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifyAccountModal">修改</a></td>
                                 <td class="modification">删除</td>
@@ -300,8 +306,10 @@
                                 <th scope="row">3</th>
                                 <td>Larry</td>
                                 <td>资料录入</td>
-                                <td>Bird</td>
-                                <td>15648975632</td>
+                                <td>BIRDHS</td>
+                                <td>桌旗</td>
+                                <td>20201549</td>
+                                <td>15469875234</td>
                                 <td>正常</td>
                                 <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifyAccountModal">修改</a></td>
                                 <td class="modification">删除</td>
@@ -310,8 +318,10 @@
                                 <th scope="row">4</th>
                                 <td>Larry</td>
                                 <td>发货</td>
-                                <td>lajelly</td>
-                                <td>15648975632</td>
+                                <td>BIRDHS</td>
+                                <td>鼠标垫</td>
+                                <td>65412879</td>
+                                <td>14569874563</td>
                                 <td>正常</td>
                                 <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifyAccountModal">修改</a></td>
                                 <td class="modification">删除</td>
@@ -320,8 +330,10 @@
                                 <th scope="row">5</th>
                                 <td>Larry</td>
                                 <td>资料录入</td>
-                                <td>Kikat</td>
-                                <td>15648975632</td>
+                                <td>BIRDHS</td>
+                                <td>窗帘</td>
+                                <td>20104569</td>
+                                <td>15963547896</td>
                                 <td>正常</td>
                                 <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifyAccountModal">修改</a></td>
                                 <td class="modification">删除</td>
@@ -425,6 +437,42 @@
                     </div>
                     <div class="row clearfix padding-10-0">
                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label for="supplier_name">供货商名称</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="form-line">
+                                    <input type="password" id="supplier_name" class="form-control" placeholder="Enter your the Supplier's name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label for="product_name">产品名称</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="form-line">
+                                    <input type="password" id="product_name" class="form-control" placeholder="Enter your the product name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label for="product_id">产品ID</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="form-line">
+                                    <input type="password" id="product_id" class="form-control" placeholder="Enter your product ID">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
                             <label>账户角色</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
@@ -438,6 +486,8 @@
                                     <label for="radio_3">产品上传</label>
                                     <input name="group1" type="radio" id="radio_4" class="with-gap">
                                     <label for="radio_4">发货</label>
+                                    <input name="group1" type="radio" id="radio_5" class="with-gap">
+                                    <label for="radio_5">无</label>
                                 </div>
                             </div>
                         </div>
@@ -524,6 +574,42 @@
                     </div>
                     <div class="row clearfix padding-10-0">
                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label>供货商名称</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="form-line">
+                                    <textarea rows="1" class="form-control no-resize auto-growth" placeholder="DIVING"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label>产品名称</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="form-line">
+                                    <textarea rows="1" class="form-control no-resize auto-growth" placeholder="雨伞"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
+                            <label>产品ID</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                            <div class="form-group formGroup">
+                                <div class="form-line">
+                                    <textarea rows="1" class="form-control no-resize auto-growth" placeholder="20102546"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix padding-10-0">
+                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
                             <label>账户角色</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
@@ -537,6 +623,8 @@
                                     <label for="radio_d">产品上传</label>
                                     <input name="group1" type="radio" id="radio_f" class="with-gap">
                                     <label for="radio_f">发货</label>
+                                    <input name="group1" type="radio" id="radio_g" class="with-gap">
+                                    <label for="radio_g">无</label>
                                 </div>
                             </div>
                         </div>
