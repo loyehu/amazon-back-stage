@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>亚马逊后台管理-账号列表</title>
+    <title>亚马逊后台管理-供货商产品</title>
     <meta name="keywords" content="亚马逊,购物">
     <meta name="description" content="亚马逊后台管理">
     <link rel="icon" href="" type="image/x-icon">
@@ -231,9 +231,9 @@
                                 <span>管理账号</span>
                             </a>
                             <ul class="ml-menu">
-                                <li class="active"><a href="javascript:void(0);">账号列表</a></li>
+                                <li><a href="account-list.html">账号列表</a></li>
                                 <li><a href="supplier-management.html">供货商管理</a></li>
-                                <li><a href="supplier-product.html">供货商产品</a></li>
+                                <li class="active"><a href="javascript:void(0);">供货商产品</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -258,20 +258,19 @@
                 <div class="card">
                     <div class="header">
                         <h2>
-                            账号列表
-                            <small>不同账号的不同角色承担不同责任</small>
+                            供货商列表
+                            <small></small>
                         </h2>
                     </div>
                     <div class="body table-responsive tableResponsive">
-                        <button type="button" class="btn btn-primary accountModalBtn" data-toggle="modal" data-target="#accountModal">新建子账号</button>
+                        <button type="button" class="btn btn-primary accountModalBtn" data-toggle="modal" data-target="#supplierProductModal">新建供货商产品</button>
                         <table class="table table-striped dataTable js-exportable">
                             <thead>
                             <tr>
                                 <th>序号</th>
-                                <th>账户名称</th>
-                                <th>角色</th>
-                                <th>联系人名</th>
-                                <th>联系方式</th>
+                                <th>供货商名称</th>
+                                <th>产品名称</th>
+                                <th>产品ID</th>
                                 <th>状态</th>
                                 <th>修改</th>
                                 <th>删除</th>
@@ -280,52 +279,47 @@
                             <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>上传产品</td>
-                                <td>ASEDC</td>
-                                <td>18634975215</td>
+                                <td>DIVING</td>
+                                <td>鼠标垫</td>
+                                <td>45217896</td>
                                 <td>正常</td>
-                                <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifyAccountModal">修改</a></td>
+                                <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifySupplierProductModal">修改</a></td>
                                 <td class="modification">删除</td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>查看统计</td>
-                                <td>WREFDECFS</td>
-                                <td>13549786245</td>
+                                <td>DIVING</td>
+                                <td>花园旗</td>
+                                <td>45216398</td>
                                 <td>正常</td>
-                                <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifyAccountModal">修改</a></td>
+                                <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifySupplierProductModal">修改</a></td>
                                 <td class="modification">删除</td>
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>资料录入</td>
-                                <td>EGCXDSDF</td>
-                                <td>15469875234</td>
+                                <td>HJDLNI</td>
+                                <td>桌旗</td>
+                                <td>78541236</td>
                                 <td>正常</td>
-                                <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifyAccountModal">修改</a></td>
+                                <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifySupplierProductModal">修改</a></td>
                                 <td class="modification">删除</td>
                             </tr>
                             <tr>
                                 <th scope="row">4</th>
-                                <td>Larry</td>
-                                <td>发货</td>
-                                <td>EDFVDX</td>
-                                <td>14569874563</td>
+                                <td>HJDLNI</td>
+                                <td>雨伞</td>
+                                <td>96325874</td>
                                 <td>正常</td>
-                                <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifyAccountModal">修改</a></td>
+                                <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifySupplierProductModal">修改</a></td>
                                 <td class="modification">删除</td>
                             </tr>
                             <tr>
                                 <th scope="row">5</th>
-                                <td>Larry</td>
-                                <td>资料录入</td>
-                                <td>RGBGSDV</td>
-                                <td>15963547896</td>
+                                <td>HJDLNI</td>
+                                <td>窗帘</td>
+                                <td>36521478</td>
                                 <td>正常</td>
-                                <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifyAccountModal">修改</a></td>
+                                <td><a class="modified-data" href="#" data-toggle="modal" data-target="#modifySupplierProductModal">修改</a></td>
                                 <td class="modification">删除</td>
                             </tr>
                             </tbody>
@@ -355,93 +349,48 @@
     </div>
 </div>
 
-<!-- 新建子账号 modal -->
-<div class="modal fade" tabindex="-1"  id="accountModal" role="dialog" aria-labelledby="myLargeModalLabel">
+<!-- 新建供货商产品 modal -->
+<div class="modal fade" tabindex="-1"  id="supplierProductModal" role="dialog" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content modalContent">
             <div class="modal-header modalHeader">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">新建账号</h4>
+                <h4 class="modal-title">新建供货商产品</h4>
             </div>
             <div class="modal-body modalBody">
                 <form class="form-horizontal">
                     <div class="row clearfix padding-10-0">
                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
-                            <label for="email_address_2">账户名称</label>
+                            <label for="supplier_name">供货商名称</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
                             <div class="form-group formGroup">
                                 <div class="form-line">
-                                    <input type="text" id="email_address_2" class="form-control" placeholder="Enter your account name">
+                                    <input type="text" id="supplier_name" class="form-control" placeholder="Enter your Supplier's name">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row clearfix padding-10-0">
                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
-                            <label for="password_2">账户密码</label>
+                            <label for="product_name">产品名称</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
                             <div class="form-group formGroup">
                                 <div class="form-line">
-                                    <input type="password" id="password_2" class="form-control" placeholder="Enter your account password">
+                                    <input type="text" id="product_name" class="form-control" placeholder="Enter your product name">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row clearfix padding-10-0">
                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
-                            <label for="confirm_password">确认密码</label>
+                            <label for="product_id">产品ID</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
                             <div class="form-group formGroup">
                                 <div class="form-line">
-                                    <input type="password" id="confirm_password" class="form-control" placeholder="Retype the password to confirm it">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix padding-10-0">
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
-                            <label for="contact">联系人名</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-                            <div class="form-group formGroup">
-                                <div class="form-line">
-                                    <input type="text" id="contact" class="form-control" placeholder="Enter your the Contact">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix padding-10-0">
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
-                            <label for="contact_way">联系方式</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-                            <div class="form-group formGroup">
-                                <div class="form-line">
-                                    <input type="text" id="contact_way" class="form-control" placeholder="Enter your the contact information">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix padding-10-0">
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
-                            <label>账户角色</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-                            <div class="form-group formGroup">
-                                <div class="demo-radio-button radioButton">
-                                    <input name="group1" type="radio" class="with-gap" id="radio_1" checked="">
-                                    <label for="radio_1">查看统计</label>
-                                    <input name="group1" type="radio" class="with-gap" id="radio_2">
-                                    <label for="radio_2">录入账号</label>
-                                    <input name="group1" type="radio" class="with-gap" id="radio_3">
-                                    <label for="radio_3">产品上传</label>
-                                    <input name="group1" type="radio" id="radio_4" class="with-gap">
-                                    <label for="radio_4">发货</label>
-                                    <input name="group1" type="radio" id="radio_5" class="with-gap">
-                                    <label for="radio_5">无</label>
+                                    <input type="text" id="product_id" class="form-control" placeholder="Enter your the product ID">
                                 </div>
                             </div>
                         </div>
@@ -456,93 +405,48 @@
     </div>
 </div>
 
-<!--修改账号 modal-->
-<div class="modal fade" tabindex="-1"  id="modifyAccountModal" role="dialog" aria-labelledby="myLargeModalLabel">
+<!--修改供货商产品 modal-->
+<div class="modal fade" tabindex="-1"  id="modifySupplierModal" role="dialog" aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content modalContent">
             <div class="modal-header modalHeader">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">修改账号资料</h4>
+                <h4 class="modal-title">修改供应商产品资料</h4>
             </div>
             <div class="modal-body modalBody">
                 <form class="form-horizontal">
                     <div class="row clearfix padding-10-0">
                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
-                            <label for="accountTitle">账户名称</label>
+                            <label for="supplierName">供货商名称</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
                             <div class="form-group formGroup">
                                 <div class="form-line">
-                                    <input type="text" id="accountTitle" class="form-control" placeholder="Mark">
+                                    <input type="text" id="supplierName" class="form-control" placeholder="DIVING">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row clearfix padding-10-0">
                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
-                            <label for="accountPassword">账户密码</label>
+                            <label for="productName">产品名称</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
                             <div class="form-group formGroup">
                                 <div class="form-line">
-                                    <input type="password" id="accountPassword" class="form-control" placeholder="*********">
+                                    <input type="text" id="productName" class="form-control" placeholder="鼠标垫">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row clearfix padding-10-0">
                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
-                            <label for="confirmPassword">确认密码</label>
+                            <label for="productId">产品ID</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
                             <div class="form-group formGroup">
                                 <div class="form-line">
-                                    <input type="password" id="confirmPassword" class="form-control" placeholder="*********">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix padding-10-0">
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
-                            <label for="oContact">联系人名</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-                            <div class="form-group formGroup">
-                                <div class="form-line">
-                                    <input type="text" id="oContact" class="form-control" placeholder="ASEDC">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix padding-10-0">
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
-                            <label for="contactWay">联系方式</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-                            <div class="form-group formGroup">
-                                <div class="form-line">
-                                    <input type="text" id="contactWay" class="form-control" placeholder="18634975215">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix padding-10-0">
-                        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 form-control-label">
-                            <label>账户角色</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-                            <div class="form-group formGroup">
-                                <div class="demo-radio-button radioButton">
-                                    <input name="group1" type="radio" class="with-gap" id="radio_a">
-                                    <label for="radio_a">查看统计</label>
-                                    <input name="group1" type="radio" class="with-gap" id="radio_s" checked="">
-                                    <label for="radio_s">录入账号</label>
-                                    <input name="group1" type="radio" class="with-gap" id="radio_d">
-                                    <label for="radio_d">产品上传</label>
-                                    <input name="group1" type="radio" id="radio_f" class="with-gap">
-                                    <label for="radio_f">发货</label>
-                                    <input name="group1" type="radio" id="radio_g" class="with-gap">
-                                    <label for="radio_g">无</label>
+                                    <input type="text" id="productId" class="form-control" placeholder="45217896">
                                 </div>
                             </div>
                         </div>
